@@ -1,0 +1,21 @@
+# Core
+numpy<2
+pandas
+openai
+tiktoken
+
+# Graph construction
+scikit-learn          # k-means medoid pool, label_extraction
+gliner2               # schema-conditioned entity extraction
+spacy                 # coreference pipeline host
+fastcoref             # LingMess coreference
+torch                 # entity_linking, hyperedge_linking
+transformers          # flan-t5 matcher, DeBERTa NLI
+sentence-transformers # MiniLM encoder
+pytokenjoin           # fuzzy set similarity join
+
+# Retrieval
+networkx              # reads graph.graphml in hyperedge_simsearch
+
+# Evaluation
+matplotlib            # total_cost.py --plot only

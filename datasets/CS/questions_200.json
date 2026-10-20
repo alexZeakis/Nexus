@@ -1,0 +1,2752 @@
+[
+  {
+    "question": "What data structure is involved in both the IP redirect function's handling of network packets and the fragmentation reassembly process in networking code?",
+    "golden_answers": [
+      "STRUCT SK_BUFF"
+    ],
+    "context": [
+      "static void __ip_rt_update_pmtu(struct rtable *rt, struct flowi4 *fl4, u32 mtu)",
+      "static void __ip_do_redirect(struct rtable *rt, struct sk_buff *skb, struct flowi4 *fl4, bool kill_route) {...}",
+      "The feature vector for each impression would consist of variables related to the impression event (such as features relating to the user, web page, advert and advertiser, and various other factors relating to the context of the event, such as the type of device used, time of the day, and geolocation).",
+      "int ip_defrag(struct sk_buff *skb, u32 user)",
+      "if (sp->sa_protocol != PX_PROTO_OE) goto end;",
+      "static int ip_frag_reasm(struct ipq *qp, struct sk_buff *prev, struct net_device *dev) {"
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What term is used to describe occurrences that arise from experiments, as well as in probability contexts related to sample spaces?",
+    "golden_answers": [
+      "EVENT"
+    ],
+    "context": [
+      "Every experiment has an outcome; in equations, P(Ω) = 1.",
+      "Perform N experiments and record the number of times each event occurs in the experiments.",
+      "Following is a description of its members and pointing out where they are incremented.",
+      "unsigned long hits; /* number of hits */",
+      "\"3.36 I claim event ![\\\\mathcal{B}](A442674_1_En_3_Chapter_IEq402.gif) has probability ε, that ![P(\\\\mathcal{A}\\\\vert \\\\mathcal{B}) = 1](A442674_1_En_3_Chapter_IEq403.gif), and that ![P(\\\\mathcal{B}\\\\vert \\\\mathcal{A}) =\\\\epsilon /2](A442674_1_En_3_Chapter_IEq404.gif). Can such a probability distribution exist?",
+      "Definitions related to sample space, events, and probabilities are outlined."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "In data analysis, what term describes the value that separates the higher half from the lower half of a dataset, and how might it relate to population statistics and transformations in mathematical definitions?",
+    "golden_answers": [
+      "MEDIAN"
+    ],
+    "context": [
+      "The first step in our machine learning pipeline will be taking in the data that we require for training our models.",
+      "For much, but not all, data, you can expect that roughly half the data is smaller than the median, and roughly half is larger than the median.",
+      "The ethtool_ops structure includes pointers for several callbacks for handling offloads, getting and setting various device settings, reading registers, getting statistics, reading RX flow hash indirection table, WakeOnLAN parameters, and many more.",
+      "But what happens if we want to reason about, say, the median of a population? Estimating the standard error of a median is difficult mathematically, and estimating the standard error of other interesting statistics can be difficult, too.",
+      "P\\(\\\\left \\\\{\\\\vert U\\\\vert \\\\geq w\\\\right \\\\} = P\\\\(\\\\left \\\\{\\\\vert X - \\\\mathbb{E}\\\\left \\[X\\\\right \\]\\\\vert \\\\geq a\\\\right \\\\}\\\\)",
+      "Show that median\\left(\\left\\{x+c\\right\\}\\right)=median\\left(\\left\\{x\\right\\}\\right)+c by substituting into the definition."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What is the resource that combines the Send Queue and Receive Queue, and is involved in binding a Memory Window by posting a special Work Request, while also providing protection among various RDMA resources?",
+    "golden_answers": [
+      "QP"
+    ],
+    "context": [
+      "The ib_post_send() method takes a linked list of Send Requests as an argument and adds them to the Send Queue for future processing.",
+      "QP is a resource that combines two Work Queues together: the Send Queue and the Receive Queue.",
+      "struct ib_mr_attr { struct ib_pd *pd; u64 device_virt_addr; u64 size; int mr_access_flags; u32 lkey; u32 rkey; };",
+      "The ib_bind_mw() method binds a Memory Window to a specified Memory Region with a specific address, size, and remote permissions by posting a special Work Request to a QP.",
+      "SRQ allows managing Receive Requests in a single queue, preventing starvation in RC QPs.",
+      "A PD allows associating itself with several other RDMA resources—such as SRQ, QP, AH, or MR—in order to provide a means of protection among them."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What type of packet is discarded if it does not meet certain criteria during processing in network device drivers, as indicated in various functions like eth_type_trans(), icmp_send(), and during sanity checks?",
+    "golden_answers": [
+      "PACKET_HOST"
+    ],
+    "context": [
+      "When the packet was in L2, in the network device driver Rx path, skb->data pointed to the L2 (Ethernet) header; now that the packet is going to be moved to Layer 3, immediately after the call to the eth_type_trans() method, skb->data should point to the network (L3) header, which starts immediately after the Ethernet header.",
+      "If the pkt_type—which was determined by the eth_type_trans() method, which should be called from the network driver, and which is discussed in Appendix A—is not PACKET_HOST, the packet is discarded:",
+      "icmp_send(skb, ICMP_DEST_UNREACH, ICMP_PORT_UNREACH, 0);",
+      "if (NEIGH_CB(skb)->flags & LOCALLY_ENQUEUED || skb->pkt_type == PACKET_HOST || in_dev->arp_parms->proxy_delay == 0) { arp_send(ARPOP_REPLY, ETH_P_ARP, sip, dev, tip, sha, dev->dev_addr, sha); }",
+      "the method performs sanity checks, like making sure that the length of the netlink message header does not exceed the permitted max length (NLMSG_HDRLEN).",
+      "First we make some sanity checks (for example, checking to see if the packet type is not PACKET_HOST or if the packet size is shorter than the TCP header) and discard the packet if there are any problems; then some initializations are made and also a lookup for a corresponding socket is performed by calling the __inet_lookup_skb() method."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "In the context of network protocols and statistical definitions, what value is commonly represented as '0' in both the initialization of ICMP sockets and the median of a modified random variable?",
+    "golden_answers": [
+      "0"
+    ],
+    "context": [
+      "Show that median\\left(\\left\\{x+c\\right\\}\\right)=median\\left(\\left\\{x\\right\\}\\right)+c by substituting into the definition.",
+      "Write X for a Bernoulli random variable which takes the value 1 with probability p (and 0 with probability (1 − p)).",
+      "The inet_init() method invokes the icmp_init() method, which in turn calls the icmp_sk_init() method to create a kernel ICMP socket for sending ICMP messages and to initialize some ICMP procfs variables to their default values.",
+      "Initialized to 0 in icmp_sk_init()",
+      "In Chapter 3 you will learn about the ICMP protocol, which helps to keep the system behaving correctly by sending error and control messages about the network layer (L3).",
+      "If you want to set privileges for a user in the system, you should run from the command line echo 0 2147483647 > /proc/sys/net/ipv4/ping_group_range."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What data structure is used to store training data for K-means, dimensionality reduction models, and TF-IDF transformed vectors in Spark?",
+    "golden_answers": [
+      "RDD"
+    ],
+    "context": [
+      "14/09/02 22:04:38 INFO SparkContext: Job finished: collectAsMap at KMeans.scala:193, took 0.040685 s",
+      "Training for K-means in MLlib takes an approach similar to the other models—we pass an RDD that contains our training data to the train method of the KMeans object.",
+      "Training a dimensionality reduction model with PCA running on the LFW dataset.",
+      "The final step in the processing pipeline is to extract the actual feature vectors that will be the input to our dimensionality reduction model.",
+      "Then, we will compute the global IDF and use it to transform the term frequency vectors into TF-IDF vectors.",
+      "When you examine the first element in the RDD of TF-IDF transformed vectors, you will see output similar to the one shown here:"
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What package is used to manage routing entries and interfaces in a network while also being developed alongside ethtool and supporting network namespaces?",
+    "golden_answers": [
+      "IPROUTE2"
+    ],
+    "context": [
+      "For example, IPv6, IPsec, Wireless (IEEE 802.11), IEEE 802.15.4, NFC, InfiniBand, and more are key components in networking.",
+      "Like in IPv4, we can manage adding and deleting routing entries and displaying the routing tables with the ip route command of iproute2 and with the route command of net-tools.",
+      "Moving a network interface to a network namespace named ns1 can be done with the ip command.",
+      "You will also see several examples of how simple it is to create and manage network namespaces with the ip command of iproute2.",
+      "For many devices, PHY flow control parameters like autonegotiation, speed, or duplex can be configured via the PHY device with ethtool commands.",
+      "Development of the iproute2 and the ethtool userspace packages is also handled in the netdev mailing list."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What network interface can be configured for Wake-On-LAN and can also be moved to a different PID namespace by specifying a PID?",
+    "golden_answers": [
+      "ETH1"
+    ],
+    "context": [
+      "Note that if the packet is to be forwarded, the xfrm_lookup() method was invoked from the __xfrm_route_forward() method, and there is no socket associated with the packet, because it was not generated on the local host; in this case, the specified sk argument is NULL:",
+      "The ethtool also lets the sysadmin define which packets should wake the device; for example, ethtool -s eth1 wol g will enable Wake-On-LAN for MagicPacket frames.",
+      "ifconfig eth0 txqueuelen 1100: Change the Tx Queue length to 1100.",
+      "Examples:",
+      "When creating the first process in a new PID namespace, its PID is 1.",
+      "You can move a network interface to a network namespace named ns1 also by specifying a PID of a process that is attached to that namespace."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What adaptation layer enables IPv6 communication over devices that support low-power wireless protocols, and which is also mentioned alongside ZigBeeIP and IEEE 802.15.4?",
+    "golden_answers": [
+      "6LOWPAN"
+    ],
+    "context": [
+      "Nevertheless, most of the code in net/ipv4/ping.c is a dual-stack code (intended for both IPv4 and IPv6).",
+      "The text discusses the specifications of ZigBeeIP and its basis on Internet protocols such as IPv6, TCP, UDP, 6LoWPAN, and more.",
+      "Another interesting subsystem discussed in Chapter 14 is the IEEE 802.15.4, which is for low-power and low-cost devices.",
+      "The Linux Bluetooth subsystem and its implementation, the IEEE 802.15.4 Linux subsystem and 6LoWPAN, and the NFC subsystem were all covered.",
+      "As opposed to NFC tags, NFC devices can generate their own magnetic field to initiate NFC communications.",
+      "6LoWPAN is an adaptation layer that enables IPv6 communication over low-power wireless networks."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What is the common link layer technology that uses MAC addresses for addressing in network transmission and handles packet collisions intelligently?",
+    "golden_answers": [
+      "ETHERNET"
+    ],
+    "context": [
+      "The SHA: The source hardware address (the MAC address, which is 6 bytes).",
+      "In Ethernet, which is the most commonly used link layer (L2), the L2 address of a host is its MAC address.",
+      "The station that sent the PREQ may try to send packets to the final destination while still not knowing the route to that destination.",
+      "With Ethernet, a station starts to transmit when the medium is idle; if a collision is detected during transmission, it stops, and a random backoff period starts.",
+      "The estimate MSW has L1 L2(G − 1) degrees of freedom.",
+      "When the packet was in L2, in the network device driver Rx path, skb->data pointed to the L2 (Ethernet) header; now that the packet is going to be moved to Layer 3, immediately after the call to the eth_type_trans() method, skb->data should point to the network (L3) header, which starts immediately after the Ethernet header."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What type of probability distribution is used when computing the standard error for the difference between means, especially when degrees of freedom are limited?",
+    "golden_answers": [
+      "T-DISTRIBUTION"
+    ],
+    "context": [
+      "Compute the standard error for the difference between the means.",
+      "You Should Remember These Definitions.",
+      "so the variance of this random variable is σ²/(GL²).",
+      "Using our previous reasoning, we have that...is the value of a random variable with a t-distribution with k x + k y − 2 degrees of freedom.",
+      "should produce a normal distribution",
+      "Here the probability distribution we use is either a t-distribution with N − 1 degrees of freedom, or a normal distribution if N is sufficiently large."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What is the fundamental structure that begins each Ethernet packet, which contains fields such as source and destination MAC addresses, and distinguishes it from other headers like the 802.11 header?",
+    "golden_answers": [
+      "ETHERNET HEADER"
+    ],
+    "context": [
+      "As a result of the registration just shown, each Ethernet packet whose ethertype is ETH_P_IPV6 (0x86DD) will be handled by the ipv6_rcv() method.",
+      "Each Ethernet packet starts with an Ethernet header, which is 14 bytes long.",
+      "It consists of the Ethernet type (2 bytes), the source MAC address (6 bytes), and the destination MAC address (6 bytes).",
+      "You should build an Ethernet header, which should include a destination MAC address.",
+      "As we can see, this is the first line of our user data file, separated by the '|' character.",
+      "In contrast to an Ethernet header (struct ethhdr), which contains only three fields (source MAC address, destination MAC address, and Ethertype), the 802.11 header contains up to six addresses and some other fields."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What feature related to network isolation was officially introduced in the Linux kernel version where the first DCCP implementation and busy polling sockets were discussed in advanced topics?",
+    "golden_answers": [
+      "NETWORK NAMESPACES"
+    ],
+    "context": [
+      "The strongSwan project is the only complete open source implementation of RFC 5996, 'Internet Key Exchange Protocol Version 2 (IKEv2),' whereas the Openswan project only implements a small mandatory subset.",
+      "ED",
+      "The first DCCP Linux implementation was released in Linux kernel 2.6.14 (2005).",
+      "Network namespaces support was added in the 2.6.29 kernel.",
+      "Figure 14-1 contrasts the traditional receive flow with that of a socket that has been enabled for Busy Polling.",
+      "Chapter 14 concludes the book with a discussion of advanced topics such as Linux namespaces and network namespaces in particular, Busy Poll Sockets, the Bluetooth subsystem, the IEEE 802.15.4 subsystem, the Near Field Communication (NFC) subsystem, the PCI subsystem, and more."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What type of packets are forwarded across networks by the IP protocol and used in wireless mesh networks?",
+    "golden_answers": [
+      "DATA PACKETS"
+    ],
+    "context": [
+      "However, because of a lack of space for management packets sub-types, action frames are used also in various newer amendments to the standard—for example, HT action frames in 802.11n.",
+      "There are three types of packets in 802.11—management, control, and data.",
+      "The traceroute utility starts by sending messages with a TTL of 1, and with each received ICMP_DEST_UNREACH with code ICMP_TIME_EXCEED as a reply, it increases the TTL by 1 and sends again to the same destination.",
+      "The IP protocol manages how data packets are forwarded and routed across networks, ensuring that data is sent to the correct destination in a timely manner.",
+      "Proactive routing can be used if a Mesh node is known to be the recipient of a lot of mesh traffic.",
+      "Wireless mesh networks forward data packets over multiple wireless hops."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What gaming tool is associated with probability concepts, including hitting an absorbing state and flipping two fair six-sided examples?",
+    "golden_answers": [
+      "DICE"
+    ],
+    "context": [
+      "Properties that might be of interest in this case include: the probability of hitting an absorbing state; the expected time to go from one state to another; the expected time to hit an absorbing state; and which states have high probability under the stationary distribution.",
+      "The set of states is finite, though big.",
+      "Part II Probability",
+      "Worked example 3.14 (Dice) describes flipping two fair six-sided dice and calculating a particular probability.",
+      "You have two decks of 52 standard playing cards. One has been shuffled properly. The other is organized as 26 black cards, then 26 red cards.",
+      "Cards refer to a standard deck of playing cards containing 52 cards divided into four suits."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "In what layer of the OSI model do packets, including those from the ICMP protocol and TCP/UDP protocols, get processed for error messages and control, as mentioned in various chapters?",
+    "golden_answers": [
+      "NETWORK LAYER"
+    ],
+    "context": [
+      "You will learn about the registration of the IPv4 protocol handler with the dev_add_pack() method in Chapter 4, and about the registration of the IPv6 protocol handler also with the dev_add_pack() method in Chapter 8.",
+      "The packets generated locally are passed to the network layer, L3 (described in Chapter 4, in the section 'Sending IPv4 Packets').",
+      "Chapter 3, _Obtaining, Processing, and Preparing Data with Spark_, details how to go about obtaining data for use in a machine learning system.",
+      "In Chapter 3 you will learn about the ICMP protocol, which helps to keep the system behaving correctly by sending error and control messages about the network layer (L3).",
+      "the port numbers of the packet. As a result, it recalculates the checksum of the TCP or the UDP header.",
+      "I will also deal with passing packets from the network layer (L3) to the transport layer (L4) when working with these protocols."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What term is associated with the initialization of an attribute structure from a Work Completion, is mentioned in a glossary of network terms, and is described in methods related to Linux and SNMP symbols?",
+    "golden_answers": [
+      "AH"
+    ],
+    "context": [
+      "The ib_init_ah_from_wc() method initializes an AH attribute structure from a Work Completion and a GRH structure.",
+      "number that the Work Completion came from and the AH will be associated with.",
+      "* total_ps_buffered: This is the total number of packets (unicast and multicasts/broadcasts) which the AP buffered for the station.",
+      "The following list of glossary terms are covered in this book.",
+      "Linux Symbol | SNMP (procfs) Symbol | Methods in Which the Counter Might Be Incremented.",
+      "Following is a description of four methods related to the AH."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What layer of the network stack is responsible for guaranteeing the reliability of packet delivery and handling the tracking of protocols in network communications?",
+    "golden_answers": [
+      "TRANSPORT LAYER"
+    ],
+    "context": [
+      "Reliability is guaranteed—that is, the arrival of all packets according to their order with the same content that they were sent with is guaranteed.",
+      "If the packets are for local delivery, they will be delivered to the transport layer (L4) for handling by listening sockets.",
+      "will change their destination IP address to 192.168.1.8.",
+      "The transport layer checksum calculation takes into account the source and destination of the IP addresses.",
+      "l4proto = __nf_ct_l4proto_find(pf, protonum);",
+      "Now you try to find if the transport layer (L4) protocol can be tracked."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What integer member exists in each of the six namespace structures related to the creation of a unique proc inode number, allocated by a specific method, during the process of creating a new UTS namespace object?",
+    "golden_answers": [
+      "PROC_INUM"
+    ],
+    "context": [
+      "unique proc inode for the newly created namespace by calling the proc_alloc_inum() method; the newly created unique proc inode number is assigned to net->proc_inum.",
+      "Each of the six namespace structures contains an integer member called proc_inum, which is the namespace unique proc inode number and is assigned by calling the proc_alloc_inum() method.",
+      "The clone_uts_ns() method, in turn, allocates a new UTS namespace object, copies the new_utsname object of the specified UTS namespace (tsk->nsproxy->uts_ns) into the new_utsname object of the newly created UTS namespace object, and returns the newly created UTS namespace.",
+      "struct uts_namespace { struct kref kref; struct new_utsname name; struct user_namespace *user_ns; unsigned int proc_inum; };",
+      "For IPv4, it is done by the ipv4_get_l4proto() method.",
+      "Here is a short description of several members of the net structure: ..."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What transport layer protocol is involved in a three-way handshake and can be configured in iptables for managing network traffic including HTTP connections?",
+    "golden_answers": [
+      "TCP"
+    ],
+    "context": [
+      "The third parameter in netlink kernel creation refers to a struct netlink_kernel_cfg with optional parameters.",
+      "For example: iptables -t mangle -A INPUT -p tcp --dport 80 -j SECMARK --selctx system_u:object_r:httpd_packet_t:s0.",
+      "A three way handshake is used to set up a TCP connection between a TCP client and a TCP server.",
+      "DCCP is an unreliable, congestion-controlled transport layer protocol and, as such, it borrows from both UDP and TCP while adding new features.",
+      "This chapter also covers two newer transport protocols, the Stream Control Transmission Protocol (SCTP) and the Datagram Congestion Control Protocol (DCCP).",
+      "Also in IPv6, there are two main methods for sending IPv6 packets from Layer 4, the transport layer: the first is the ip6_xmit() method, which is used by the TCP, Stream Control Transmission Protocol (SCTP), and Datagram Congestion Control Protocol (DCCP) protocols."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "In Bayesian statistics, what term describes the updated probability of a parameter after observing data, and is commonly discussed alongside prior probabilities and concepts of consistency?",
+    "golden_answers": [
+      "POSTERIOR"
+    ],
+    "context": [
+      "One worth knowing about is consistency; for our purposes, this means that the maximum likelihood estimate of parameters can be made arbitrarily close to the right answer by having a sufficiently large dataset.",
+      "9.4.2 Remember These Terms includes terms such as independent and identically distributed, consistency, prior and posterior probabilities, and various Bayesian concepts.",
+      "I have plotted data for 1901 to the end of the series as circles, and the rest of the data as *'s.",
+      "Apply Bayes' rule, and form the posterior P(θ | D). This posterior represents the probability that θ takes various values, given the data D.",
+      "The normalizing constant for P(θ | D, α, β) was easy to recover because the Gamma distribution is a conjugate prior for the Poisson distribution.",
+      "Use a Gamma distribution as a prior, and write out the posterior."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What protocol in IPv6 is responsible for multicast management and is discussed alongside the versions of IGMP and IPv6 extension headers?",
+    "golden_answers": [
+      "MLD PROTOCOL"
+    ],
+    "context": [
+      "There are three versions of IGMP:",
+      "Next, I will describe the Multicast Listener Discovery protocol, which parallels the IPv4 IGMPv3 protocol.",
+      "Both the icmp_reply() and the icmp_send() methods support rate limiting; they call icmpv4_xrlim_allow(), and if the rate limiting check allows sending the packet (the icmpv4_xrlim_allow() returns true), they send the packet.",
+      "In IPv6, multicast management is handled by the MLD (Multicast Listener Discovery) protocol, which uses ICMPv6 messages, discussed in Chapter 8.",
+      "Table 8-2 shows the IPv6 extension headers by their Linux symbol, value and description.",
+      "I discussed various IPv6 topics, like IPv6 addresses (including Special Addresses and Multicast Addresses), how the IPv6 header is built, what the IPv6 extension headers are, the autoconfiguration process, the Rx path in IPv6, and the MLD protocol."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What type of occurrences can be represented in statistical analysis involving Poisson distributions, probability functions, and classification problems?",
+    "golden_answers": [
+      "EVENTS"
+    ],
+    "context": [
+      "This is the usual case, because we can't usually be sure that, say, the data truly is normal or truly comes from a Poisson distribution.",
+      "You know that, in these intervals, events occur with a Poisson distribution (for example, you might be observing Prussian officers being kicked by horses, or telemarketer calls...).",
+      "In the case of a symmetric matrix, the eigenvalues are real numbers, and there are d distinct eigenvectors that are normal to one another, and can be scaled to have unit length.",
+      "Given a sample space, a set of events, a probability function, and a countable set of real numbers, a discrete random variable is a function with domain and range.",
+      "Classifiers are immensely useful, and find wide application, because many problems are naturally classification problems.",
+      "The sample project for this chapter contains the code you will need."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What structure is referenced in the NDISC module's implementation related to network events and neighbor lookup operations?",
+    "golden_answers": [
+      "ND_TBL"
+    ],
+    "context": [
+      "neigh = __neigh_lookup(&nd_tbl, saddr, dev, !inc || lladdr || !dev->addr_len); if (neigh) { neigh_update(neigh, lladdr, NUD_STALE, NEIGH_UPDATE_F_WEAK_OVERRIDE|NEIGH_UPDATE_F_OVERRIDE); if (neigh || !dev->header_ops) { ndisc_send_na(dev, neigh, saddr, &msg->target, !!is_router, true, (ifp != NULL && inc), inc); if (neigh) neigh_release(neigh); } }",
+      "neigh = neigh_lookup(&nd_tbl, &msg->target, dev);",
+      "Following is a description of its members and pointing out where they are incremented.",
+      "if (inc) NEIGH_CACHE_STAT_INC(&nd_tbl, rcv_probes_mcast); else NEIGH_CACHE_STAT_INC(&nd_tbl, rcv_probes_ucast);",
+      "On the other hand, the ARP module and the NDISC module do register network events.",
+      "In IPv6, the NDISC module defines the NDSIC table (which is also an instance of the neigh_table structure named nd_tbl) and passes it as an argument to the neigh_table_init() method."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What identifier is used in building a flowi4 object and is also a key field in the ESP format for ensuring communication reliability in networking protocols?",
+    "golden_answers": [
+      "SPI"
+    ],
+    "context": [
+      "We need to know the destination address and the destination port in order to build a flowi4 object, which is needed for sending the SKB with the udp_send_skb() method or with the ip_append_data() method.",
+      "id: The id (xfrm_id object) consists of three fields, which uniquely define it: destination address, spi, and security protocol (AH, ESP, or IPCOMP).",
+      "Transmission is made reliable by using sequence numbers and acknowledgments.",
+      "According to the ESP format, illustrated in Figure 10-1, there are the following fields.",
+      "return NF_HOOK(NFPROTO_IPV4, NF_INET_LOCAL_IN, skb, skb->dev, NULL, ip_local_deliver_finish);",
+      "int xfrm_input(struct sk_buff *skb, int nexthdr, __be32 spi, int encap_type);"
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What structure is created by the neigh_table_init() method that relates to the VLAN tag control information and is resized when the number of entries exceeds its initial hash table size?",
+    "golden_answers": [
+      "NHT"
+    ],
+    "context": [
+      "__u16 vlan_tci, The VLAN tag control information (2 bytes), composed of ID and priority.",
+      "struct neigh_table { struct neigh_table *next; int family; ... }",
+      "When trying to create a neighbour object by the __neigh_create() method, and the number of the neighbour entries exceeds the hash table size, it must be enlarged.",
+      "The hash table size is 1 << nht->hash_shift; the hash table must be enlarged if it is exceeded.",
+      "This method frees the resources of the specified neighbouring table.",
+      "The neigh_table_init() method also creates the neighbouring hash table (the nht object) by calling the neigh_hash_alloc() method in the neigh_table_init_no_netlink() method, allocating space for eight hash entries."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What devices are essential for ensuring unique IPv6 addresses to prevent communication conflicts and also have specific protocols for forwarding packets efficiently?",
+    "golden_answers": [
+      "ROUTERS"
+    ],
+    "context": [
+      "By ensuring that each device has a unique IPv6 address, DAD helps to prevent conflicts that could disrupt communication among devices.",
+      "It is impossible to imagine the modern world without these devices.",
+      "The extension headers, the Multicast Listener Discovery (MLD) protocol, and the Autoconfiguration process are some of the new features that we discuss and demonstrate with some userspace examples.",
+      "Next, I will describe the Multicast Listener Discovery protocol, which parallels the IPv4 IGMPv3 protocol.",
+      "This driver ndo_busy_poll callback should move the packets into the network stack; see for example, the ixgbe_low_latency_recv() method, drivers/net/ethernet/intel/ixgbe/ixgbe_main.c.",
+      "Routers must not forward any packets with link-local source or destination addresses."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What is the document that defines the Neighbor Discovery protocol for IEEE 802.15.4 devices, specifies goals for the ICMPv4 protocol, and addresses packet handling in SCTP communication?",
+    "golden_answers": [
+      "RFC"
+    ],
+    "context": [
+      "Neighbor Discovery Optimization addresses issues with IPv6 multicast support and power management in IEEE 802.15.4 devices.",
+      "The Neighbor Discovery protocol is designed for sufficiently powered devices, and IEEE 802.15.4 devices can sleep in order to preserve energy; moreover, they operate in a lossy network environment, as the RFC puts it.",
+      "ICMPv6 messages",
+      "This RFC defines the goals of the ICMPv4 protocol and the format of various ICMPv4 messages.",
+      "The previous sections introduced the structure of SCTP packets and the types of chunks involved in communication.",
+      "The OOTB packets are handled by the sctp_rcv_ootb() method, which iterates over all the chunks of the packet and takes an action according to the chunk type, as specified in the RFC."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What protocol is described as the most commonly used in IPsec and supports both encryption and authentication, involving methods like AES-GCM discussed alongside the IPv4 ESP implementation and the XFRM framework?",
+    "golden_answers": [
+      "ESP PROTOCOL"
+    ],
+    "context": [
+      "I should also mention here the new Authenticated Encryption (AEAD) methods like AES-GCM, which can do the encryption and data integrity computations in a single pass and can be highly parallelized on multiple cores.",
+      "The next section discusses the IPv4 ESP implementation.",
+      "These client stations must first perform association and authentication against the AP to be able to transmit packets via the AP.",
+      "The ESP protocol is the most commonly used IPsec protocol; it supports both encryption and authentication.",
+      "I follow that with a discussion of the XFRM framework, which is the configuration and monitoring interface between the IPsec userspace part and IPsec kernel components.",
+      "Topics like the IKE protocol (which is implemented in userspace) and cryptography aspects of IPsec are discussed briefly."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What term describes the measure of the discrepancies between predicted and actual outcomes in the context of models trained on a data stream and assessed for recognition accuracy?",
+    "golden_answers": [
+      "ERROR RATE"
+    ],
+    "context": [
+      "In this example, we will create two models with different learning rates, training them both on the same data stream.",
+      "the evolving error rate of two models with different parameters as they see more and more data in our input stream.",
+      "Data items in a d dimensional data set can usually be represented with good accuracy as a weighted sum of a small number s of d dimensional vectors, together with the mean.",
+      "For example, vector quantization is often used as an early step in texture recognition or in image matching; here one can evaluate the error rate of the recognizer, or the accuracy of the image matcher.",
+      "Once we have our training data in a form that is suitable for our model, we can proceed with the model's training and testing phase.",
+      "With enough training data and a low enough dimension, the error rate is guaranteed to be no more than twice the best error rate."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What state is assigned to a neighbour in a network when the maximum number of solicitation request probes is met, and what happens to this state during neighbor table scanning if certain conditions are fulfilled?",
+    "golden_answers": [
+      "NUD_FAILED"
+    ],
+    "context": [
+      "The struct neigh_table contains various member variables like next, family, entry_size, key_len, etc.",
+      "Then it scans the neighbouring hash table and removes entries which their state is not NUD_PERMANENT or NUD_IN_TIMER, and which their reference count is 1, and if one of these conditions is met: either they are in the NUD_FAILED state or the current time is after their used timestamp + gc_staletime.",
+      "When sending solicitation requests, certain conditions affect the NUD state of the neighbour.",
+      "When sending solicitation requests, and the state of the neighbour is NUD_INCOMPLETE or NUD_PROBE, and the number of solicitation requests probes is higher or equal to neigh_max_probes(), then the state of the neighbour is set to be NUD_FAILED, and the neigh_invalidate() method is invoked.",
+      "When you reach this method for the first time with this flow, nud_state is not NUD_CONNECTED, and the output callback is the neigh_resolve_output() method.",
+      "if (neigh->nud_state & NUD_FAILED) goto out;"
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What commonly used IPsec protocol supports both encryption and authentication, as discussed in the context of AEAD methods, management packets, and the IKE protocol?",
+    "golden_answers": [
+      "ESP PROTOCOL"
+    ],
+    "context": [
+      "I should also mention here the new Authenticated Encryption (AEAD) methods like AES-GCM, which can do the encryption and data integrity computations in a single pass and can be highly parallelized on multiple cores.",
+      "The next section discusses the IPv4 ESP implementation.",
+      "This method performs authentication by sending a management packet with authentication sub-type (IEEE80211_STYPE_AUTH).",
+      "The ESP protocol is the most commonly used IPsec protocol; it supports both encryption and authentication.",
+      "This method returns the namespace object (xs_net) associated with the specified xfrm_state object.",
+      "Topics like the IKE protocol (which is implemented in userspace) and cryptography aspects of IPsec are discussed briefly."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "In the context of symmetric matrices used in machine learning, what term describes a matrix that ensures non-negative quadratic forms when evaluated with non-zero vectors?",
+    "golden_answers": [
+      "POSITIVE SEMIDEFINITE"
+    ],
+    "context": [
+      "Show that median\\left(\\left\\{x+c\\right\\}\\right)=median\\left(\\left\\{x\\right\\}\\right)+c by substituting into the definition.",
+      "A symmetric matrix is positive semidefinite if, for any x such that x T x > 0, we have ![$$\\\\mathbf{x}^{T}\\\\mathcal{M}\\\\mathbf{x} \\\\geq 0$$](A442674_1_En_15_Chapter_IEq4.gif).",
+      "The eigenvalues of the covariance of this dataset are shown in Fig. 10.13; there are 4096 of them, making it hard to see a trend.",
+      "Now if \\\\mathcal{A} is positive semidefinite (i.e. if at least the r largest eigenvalues of \\\\mathcal{T} are non-negative), then we can factor \\\\mathcal{A} as in the previous section.",
+      "It is also a common practice in machine learning tasks to represent an image as a vector, instead of a matrix.",
+      "Assume that \\\\mathcal{S} is symmetric and positive semidefinite."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What subsystem of the Linux Kernel is responsible for providing interfaces for data structures like the forwarding information base and the POSIX-based socket API while being maintained in multiple git repositories?",
+    "golden_answers": [
+      "LINUX KERNEL NETWORKING SUBSYSTEM"
+    ],
+    "context": [
+      "This chapter is mainly an introduction and presents the main data structures that are used by the IPv4 routing subsystem.",
+      "This chapter is a short introduction to the Linux Kernel Networking subsystem.",
+      "These two types of sockets and the POSIX-based socket API are also discussed in Chapter 11.",
+      "The Linux kernel networking subsystem provides an interface to the userspace by the standard POSIX socket API.",
+      "The iproute2 is developed over a git repository, which can be downloaded by: git clone git://git.kernel.org/pub/scm/linux/kernel/git/shemminger/iproute2.git.",
+      "The Linux Kernel Networking subsystem is maintained in two git repositories."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What term describes the status generated after processing a Receive Request and is also associated with the modifications made to the attributes of an AH in communication protocols?",
+    "golden_answers": [
+      "WORK COMPLETION"
+    ],
+    "context": [
+      "The ib_modify_ah() method modifies the attributes of the AH.",
+      "number that the Work Completion came from and the AH will be associated with.",
+      "When they need to consume a Receive Request, they fetch it from the SRQ.",
+      "Every Receive Request is considered outstanding until a Work Completion is generated after its processing.",
+      "The ib_post_send() method takes a linked list of Send Requests as an argument and adds them to the Send Queue for future processing.",
+      "A Work Completion in the Send Queue of the QP will be generated to describe the status of this operation."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What term describes the delay measured in online advertising and crucial for applications that prioritize minimum delay in data transmission?",
+    "golden_answers": [
+      "LATENCY"
+    ],
+    "context": [
+      "The ip_append_data() method buffers the data for transmission but does not transmit it yet.",
+      "Near Field Communication is a very short range wireless technology (less than two inches) designed to transfer small amount of data over a very low latency link at up to 424 kb/s.",
+      "Predicting the probability of Internet users clicking on an online advert; here, the classes are binary in nature (that is, click or no click).",
+      "Latency of the online training and the model selection and deployment phases might be too high for true real-time requirements (for example, in online advertising, latency requirements are measured in single-digit milliseconds).",
+      "For sockets applications that need the lowest possible latency and are willing to pay a cost of higher CPU utilization, Linux has added a capability for Busy Polling on Sockets from kernel 3.11 and above.",
+      "The Busy Poll Sockets feature provides an interesting performance optimization technique for sockets that need low latency and are willing to pay a cost of higher CPU utilization."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What concept describes the relationship where a set of events maintains their independence when conditioned on another event, often utilized in probability theory and models like naive Bayes?",
+    "golden_answers": [
+      "CONDITIONAL INDEPENDENCE"
+    ],
+    "context": [
+      "\"I claim event ![\\\\mathcal{B}](A442674_1_En_3_Chapter_IEq402.gif) has probability ε, that ![P(\\\\mathcal{A}\\\\vert \\\\mathcal{B}) = 1](A442674_1_En_3_Chapter_IEq403.gif), and that ![P(\\\\mathcal{B}\\\\vert \\\\mathcal{A}) =\\\\epsilon /2](A442674_1_En_3_Chapter_IEq404.gif). Can such a probability distribution exist?",
+      "Definition 3.6 (Conditional Independence) Events ![$$\\mathcal{A}_{1}\\\\ldots \\\\mathcal{A}_{n}$$ are conditionally independent conditioned on event ![$$\\mathcal{B}$$ if ![$$\\displaystyle{P(\\\\mathcal{A}_{1} \\\\cap \\\\ldots \\\\cap \\\\mathcal{A}_{n}| \\\\mathcal{B}) = P(\\\\mathcal{A}_{1}| \\\\mathcal{B})\\\\ldots P(\\\\mathcal{A}_{n}| \\\\mathcal{B})}$$.",
+      "The expression $$\\\\displaystyle{P(\\\\mathcal{B}|\\\\mathcal{A}) = P(\\\\mathcal{B}).}$$ indicates a conditional probability relationship.",
+      "Definitions related to sample space, events, and probabilities are outlined.",
+      "You can think of doctors as complex multi-class classifiers: a doctor accepts a set of features (your complaints, answers to questions, and so on) and then produces a response which we can describe as a class.",
+      "A naive Bayes model assumes that each feature makes an independent contribution to the probability assigned to a class (it assumes conditional independence between features)."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What framework supports efficient Authenticated Encryption algorithms and is integral to the infrastructure of IPsec, as referenced in discussions regarding InfiniBand and its implementation in Linux?",
+    "golden_answers": [
+      "XFRM FRAMEWORK"
+    ],
+    "context": [
+      "The XFRM policy and the XFRM state are the fundamental data structures of the XFRM framework.",
+      "This chapter covered IPsec and the XFRM framework, which is the infrastructure of IPsec, and XFRM policies and states, which are the fundamental data structures of the XFRM framework.",
+      "I should also mention here the new Authenticated Encryption (AEAD) methods like AES-GCM, which can do the encryption and data integrity computations in a single pass and can be highly parallelized on multiple cores.",
+      "With the Linux 2.6.25 kernel, released in 2008, the XFRM framework started to offer support for the very efficient AEAD (Authenticated Encryption with Associated Data) algorithms.",
+      "Rami Rosen is the author of the text discussing InfiniBand and its implementation in Linux.",
+      "IPsec and IPv4/IPv6"
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What operating system incorporates the implementation of InfiniBand alongside a capability for Busy Polling on Sockets to achieve the lowest possible latency?",
+    "golden_answers": [
+      "LINUX"
+    ],
+    "context": [
+      "The ib_query_port() method queries the InfiniBand device port for its attributes.",
+      "Rami Rosen is the author of the text discussing InfiniBand and its implementation in Linux.",
+      "ED",
+      "The next chapter will deal with the Wireless subsystem and its implementation in Linux.",
+      "For lowest latency, it may help to turn off the I/O Memory Management Unit (IOMMU) support.",
+      "For sockets applications that need the lowest possible latency and are willing to pay a cost of higher CPU utilization, Linux has added a capability for Busy Polling on Sockets from kernel 3.11 and above."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "In which chapter can one learn about netlink sockets and real-world applications of a machine learning system, as well as recall information from a previous chapter on numerical data operating on feature vectors?",
+    "golden_answers": [
+      "CHAPTER 2"
+    ],
+    "context": [
+      "userspace into opt->__data. To be accurate, I should mention that if alignment is needed, the ip_options_get_finish() method also writes into opt->__data (it writes IPOPT_END in the proper place).",
+      "In Chapter 2 you will learn about netlink sockets, which provide a mechanism for bidirectional communication between userspace and the kernel.",
+      "You might recall from Chapter 3, Obtaining, Processing, and Preparing Data with Spark that the majority of machine learning models operate on numerical data in the form of feature vectors.",
+      "Contents",
+      "Once we deploy our optimal trained model, we wish to understand how it is doing in the 'wild'.",
+      "Chapter 2, _Designing a Machine Learning System_, presents an example of a real-world use case for a machine learning system."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "In which chapter will you learn about the ICMP protocol that aids in network layer error management, while also referencing the convenience method from Spark's StandardScaler?",
+    "golden_answers": [
+      "CHAPTER 3"
+    ],
+    "context": [
+      "ICMP protocol.",
+      "In Chapter 3 you will learn about the ICMP protocol, which helps to keep the system behaving correctly by sending error and control messages about the network layer (L3).",
+      "The communication between userspace and the kernel is done with netlink sockets, described in Chapter 2.",
+      "Contents",
+      "These include `StandardScaler`, which applies the standard normal transformation, and `Normalizer`, which applies the same feature vector normalization we showed you in our preceding example code.",
+      "As we mentioned in Chapter 3, _Obtaining, Processing, and Preparing Data with Spark_, we fortunately have access to a convenience method from Spark's `StandardScaler` to accomplish this."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What concept measures the effectiveness of a feature's ability to split the dataset in the context of decision trees, based on the relationship between splits, leaf nodes, and model parameters?",
+    "golden_answers": [
+      "INFORMATION GAIN"
+    ],
+    "context": [
+      "excellent choice of split—once we have arrived in a leaf, everything has the same label.",
+      "though you might be able to tell with even less than one bit.",
+      "You are given a dataset of 3 numbers, − 1, 0, 20. You wish to model this dataset with a normal distribution with unknown mean μ and standard deviation 1.",
+      "The decision tree algorithm is a top-down approach that begins at a root node (or feature), and then selects a feature at each step that gives the best split of the dataset, as measured by the information gain of this split.",
+      "Impact of parameter settings for the decision tree.",
+      "15.3 Splitting a Node in a Decision Tree 359"
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What term describes the assurance that packets arrive in order with the same content as originally sent, and is also critical in ensuring operational integrity and enhancing network performance?",
+    "golden_answers": [
+      "RELIABILITY"
+    ],
+    "context": [
+      "The ipcm_cookie structure includes information that is used further when processing the packet.",
+      "Reliability is guaranteed—that is, the arrival of all packets according to their order with the same content that they were sent with is guaranteed.",
+      "The implementation of DAD in a network configuration is vital for maintaining operational integrity and efficiency.",
+      "The method of processing ICMPv6 messages has evolved with protocols to ensure efficiency and reliability.",
+      "Effective TCP implementation enhances overall network performance and user experience.",
+      "The control of MTU behaviors has critical implications for network performance and reliability."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "In which chapter can you learn about the ICMP protocol, understand the role of numerical data in machine learning models, and find the convenience method for the `StandardScaler` in Spark?",
+    "golden_answers": [
+      "CHAPTER 3"
+    ],
+    "context": [
+      "I will also deal with passing packets from the network layer (L3) to the transport layer (L4) when working with these protocols.",
+      "In Chapter 3 you will learn about the ICMP protocol, which helps to keep the system behaving correctly by sending error and control messages about the network layer (L3).",
+      "We will explore the dataset in more detail a little later, but we will tell you now that there are some negative feature values in the numeric data.",
+      "You might recall from Chapter 3, Obtaining, Processing, and Preparing Data with Spark that the majority of machine learning models operate on numerical data in the form of feature vectors.",
+      "These include `StandardScaler`, which applies the standard normal transformation, and `Normalizer`, which applies the same feature vector normalization we showed you in our preceding example code.",
+      "As we mentioned in Chapter 3, _Obtaining, Processing, and Preparing Data with Spark_, we fortunately have access to a convenience method from Spark's `StandardScaler` to accomplish this."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "Which author wrote a book about the Linux kernel networking that discusses the IPv4 protocol and its implementation in modern life?",
+    "golden_answers": [
+      "RAMI ROSEN"
+    ],
+    "context": [
+      "This book takes you on a guided, in-depth tour of the current Linux kernel networking implementation and the theory behind it.",
+      "Chapter Reference",
+      "For example, for an IPv4 packet generated locally by a socket and transmitted outside, the network layer (IPv4) adds an IPv4 header to the SKB.",
+      "Rami Rosen Linux Kernel Networking Implementation and Theory 10.1007/978-1-4302-6197-1_8",
+      "Chapter 4 delves into the IPv4 protocol—the Internet and modern life cannot be described without it.",
+      "Chapter 4 discussed the IPv4 subsystem. In this chapter and the next I discuss one of the most important Linux subsystems, the routing subsystem, and its implementation in Linux."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What is the component that is passed as an argument along with the Memory Window type in the method that allocates a Memory Window and is also associated with the registration and re-registration of physical Memory Regions?",
+    "golden_answers": [
+      "PD"
+    ],
+    "context": [
+      "The ib_dereg_mr() method deregisters an MR. This method may fail if a Memory Window is bounded to it.",
+      "The ib_alloc_mw() method allocates a Memory Window. It takes a PD and the MW type as arguments.",
+      "struct ib_mr *ib_reg_phys_mr(struct ib_pd *pd, struct ib_phys_buf *phys_buf_array, int num_phys_buf, int mr_access_flags, u64 *iova_start);",
+      "int ib_rereg_phys_mr(struct ib_mr *mr, int mr_rereg_mask, struct ib_pd *pd, struct ib_phys_buf *phys_buf_array, int num_phys_buf, int mr_access_flags, u64 *iova_start);",
+      "int xfrm_policy_match(const struct xfrm_policy *pol, const struct flowi *fl, u8 type, u16 family, int dir);",
+      "The parameters for ib_alloc_mw() include pd and type of Memory Window."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What is the term used in networking that prevents packets from being forwarded endlessly due to errors, as indicated by the field that is decremented by each forwarding device in the IPv4 header?",
+    "golden_answers": [
+      "TTL"
+    ],
+    "context": [
+      "In this process, the incoming packets move from Layer 2 (the link layer) in the kernel networking stack, to Layer 3, the network layer, in the forwarding router machine.",
+      "The IPv4 header consists of information that defines how a packet should be handled by the kernel network stack: the protocol being used, the source and destination address, the checksum, the identification (id) of the packet that is needed for fragmentation, the TTL that helps avoiding packets being forwarded endlessly because of some error, and more.",
+      "Then an IPv4 header is built for the first fragment.",
+      "The ttl (Time To Live) field of the IPv4 header is a counter which is decreased by 1 in each forwarding device.",
+      "Sending the ICMPv4 Redirect message is done in the second phase, by the ip_forward() method.",
+      "In ip_forward(), each packet decrements its TTL."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What is the term used to describe a set of conventions and tools for building software applications, which encompasses methods for modifying attributes in networking and operates as a higher-level interface for data processing?",
+    "golden_answers": [
+      "API"
+    ],
+    "context": [
+      "The ib_modify_ah() method modifies the attributes of the AH.",
+      "The following list of glossary terms are covered in this book.",
+      "TCP functionality consists of two ingredients: management of connections, and transmitting and receiving data.",
+      "Tracking and communication between nodes, as well as the low-level operations that are inherent in parallel data processing, is discussed. It also provides a higher-level API to work with distributed data.",
+      "Becoming familiar with and learning about these two data structures is essential for understanding the Linux Kernel Networking stack.",
+      "I will start our discussion with Remote Direct Memory Access (RDMA), and discuss its main data structures and its API."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "Which method is responsible for handling ICMPv6 packets and also processes ICMPv6 echo replies sent in response to ICMPv6 echo requests?",
+    "golden_answers": [
+      "ICMPV6_RCV()"
+    ],
+    "context": [
+      "switch (optptr[3]&0xF) { case IPOPT_TS_TSONLY: if (skb) timeptr = &optptr[optptr[2]-1];  opt->ts_needtime = 1;",
+      "When getting an ICMPv6 packet, it is delivered to the icmpv6_rcv() method, which gets only an SKB as a parameter.",
+      "the ICMP header to be ICMP_ECHOREPLY and sends a reply by calling the icmp_reply() method.",
+      "For IPv6, the neighbouring messages are ICMPv6 messages, so they are handled by the icmpv6_rcv() method, which is the ICMPv6 handler.",
+      "There is also the icmpv6_echo_reply() method, which is called only as a response to an ICMPV6_ECHO_REQUEST (\\\"ping\\\") message.",
+      "As a result, the ping_rcv() method also handles ICMPV6_ECHO_REPLY messages for IPv6 (see icmpv6_rcv() in net/ipv6/icmp.c)."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What term describes the information that is passed to the layer handling specific methods and also refers to the conveyed information from guardians of a threshold?",
+    "golden_answers": [
+      "MESSAGE"
+    ],
+    "context": [
+      "Then the message is passed to the IPv6 layer, handled by certain methods.",
+      "It passes the message to the IPv6 layer.",
+      "It turns out that a very effective decision function is to choose a single feature at random, then test whether its value is larger than, or smaller than a threshold.",
+      "They had become guardians of a threshold, keepers of a message from a realm beyond stars and stripes."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "What flag is set for all but the last message type in netlink message headers, and what is its significance during a dump request?",
+    "golden_answers": [
+      "NLM_F_MULTI"
+    ],
+    "context": [
+      "There are four basic netlink message header types: NLMSG_NOOP, NLMSG_ERROR, NLMSG_DONE, NLMSG_OVERRUN.",
+      "into smaller ones, and each of them (except the last one) has the NLM_F_MULTI flag set. The last message has the NLMSG_DONE flag set.",
+      "In case it is a dump request (when the NLM_F_DUMP flag is set), you dump the table by calling the netlink_dump_start() method.",
+      "The nlmsg_flags field can be as follows: NLM_F_REQUEST, NLM_F_MULTI, NLM_F_ACK, NLM_F_DUMP, NLM_F_ROOT."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "What userspace tools are mentioned in the context of connection tracking and can be related to tools and libraries for managing network connections?",
+    "golden_answers": [
+      "CONNTRACK-TOOLS"
+    ],
+    "context": [
+      "Note Connections can be related not only as a result of expectation.",
+      "Tools and Libraries",
+      "You can change dev_addr with userspace tools like ifconfig or ip of iproute2.",
+      "There are some userspace tools (conntrack-tools) for Connection Tracking administration mentioned in the 'Quick Reference' section at the end of this chapter."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "What protocol, described in RFC 4604, is used alongside IGMPv3 for managing multicast group memberships in IPv6, and is also involved in handling specific queries related to multicast events?",
+    "golden_answers": [
+      "MLDV2"
+    ],
+    "context": [
+      "Next, I will describe the Multicast Listener Discovery protocol, which parallels the IPv4 IGMPv3 protocol.",
+      "in RFC 4604, 'Using Internet Group Management Protocol Version 3 (IGMPv3) and Multicast Listener Discovery Protocol Version 2 (MLDv2) for Source-Specific Multicast.'",
+      "static bool ip6_tlvopt_unknown(struct sk_buff *skb, int optoff) {... }",
+      "int igmp6_event_query(struct sk_buff *skb); This method handles MLDv2 and MLDv1 queries."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "What is the minimum length of an IP header in an IPv4 packet, and how does this relate to the TCP header length in networking protocols?",
+    "golden_answers": [
+      "20 BYTES"
+    ],
+    "context": [
+      "After the IP header, there is the transport header (TCP header or UDP header, for example), and after it is the payload data.",
+      "The TCP header length is 20 bytes, but it is scalable up to 60 bytes when using TCP options.",
+      "When sending an IPv4 packet, you know the destination IPv4 address.",
+      "Every IPv4 packet starts with an IP header, which is at least 20 bytes long."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "What types of tasks are evaluated using entropy and Gini impurity measures, particularly in the context of SVM's performance with large datasets?",
+    "golden_answers": [
+      "CLASSIFICATION TASKS"
+    ],
+    "context": [
+      "The entropy of a probability distribution is a number that scores how many bits, on average, would need to be known to identify an item sampled from that probability distribution.",
+      "For classification tasks, there are two measures that can be used to select the best split. These are Gini impurity and entropy.",
+      "All of these points are relatively typical of SVM's trained using stochastic gradient descent with very large datasets.",
+      "It has been shown to perform well on many classification tasks, and the linear variant can scale to very large datasets."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "In the context of vector analysis, what term refers to the columns of an orthonormal matrix used in approximating a tensor and defining an orthonormal basis for a d-dimensional space?",
+    "golden_answers": [
+      "EIGENVECTORS"
+    ],
+    "context": [
+      "Then \\\\displaystyle{\\\\mathcal{A} = \\\\mathcal{U}_{r}\\\\Lambda_{r}\\\\mathcal{U}_{r}^{T}} is the best possible rank r approximation to \\\\mathcal{T} in the Frobenius norm.",
+      "Notice that, if ![$$\\\\mathcal{U}$$](A442674_1_En_15_Chapter_IEq65.gif) is the orthonormal matrix whose columns are eigenvectors of ![$$\\\\mathcal{T}$$](A442674_1_En_15_Chapter_IEq66.gif), then we have",
+      "Cosine similarity is a measure of the angle between two vectors in an _n_-dimensional space.",
+      "In the equation $$\\\\mathcal{X}^{T}\\\\mathcal{X}\\\\beta -\\\\mathcal{X}^{T}\\\\mathbf{Y} = 0$$ for any i, it can be shown that the eigenvectors are an orthonormal basis for d dimensional space."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "What method allows a socket to receive connections and is implemented in the kernel, connected to the process of establishing a connection to a peer socket?",
+    "golden_answers": [
+      "LISTEN"
+    ],
+    "context": [
+      "connect(): Establishes a connection to a peer socket; implemented in the kernel by the sys_connect() method. Relevant to connection-based socket types (SOCK_STREAM or SOCK_SEQPACKET) as well as to connectionless socket types (SOCK_DGRAM).",
+      "---|---|---",
+      "This method performs some sanity checks, and if everything is fine, it allocates a socket by calling the sock_alloc() method, and then calling net_families[family]->create.",
+      "listen(): Allows a socket to receive connections from other sockets; implemented in the kernel by the sys_listen() method. Not relevant to datagram sockets."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "In the context of using accelerometer signals, how are twisting movements relevant for distinguishing activities like brushing teeth and walking?",
+    "golden_answers": [
+      "TWISTING MOVEMENTS"
+    ],
+    "context": [
+      "This observation works for speech, for video, and for accelerometer signals too.",
+      "As another example, if you want to tell the difference between brushing teeth and walking using accelerometer signals, knowing that there are lots of (or few) twisting movements is important, but knowing how the movements are linked together in time may not be.",
+      "For example, plurals might be converted to singular (dogs becomes dog), and forms such as walking and walker might become walk.",
+      "repeated twisting movements at the wrist, and walking involves swinging the hand back and forth."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "What process in clustering models can cause results to vary between different runs, as noted during performance evaluation?",
+    "golden_answers": [
+      "RANDOM INITIALIZATION"
+    ],
+    "context": [
+      "Finally, we evaluated the performance of the clustering model, both using manual interpretation of the cluster assignments and using mathematical performance metrics.",
+      "Note that due to random initialization, the cluster assignments might change from one run of the model to another, so your results might differ from those shown earlier.",
+      "14/09/02 22:04:38 INFO KMeans: Run 0 finished in 34 iterations",
+      "K-means provides random and K-means || initialization, with the default being K-means ||."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "In the context of kernel networking, what method is needed to create or update a neighbour entry based on certain detection states and table initialization modifications?",
+    "golden_answers": [
+      "NEIGH_EVENT_NS"
+    ],
+    "context": [
+      "Network Unreachability Detection States.",
+      "Again, call the neigh_event_ns() method to create a neighbour entry of the sender with NUD_STALE, or if such an entry exists, update that entry state to be NUD_STALE.",
+      "From kernel 3.3, the entry_size was removed from the static initialization of arp_tbl and ndisc_tbl, and the entry_size initialization is done based on the key_len in the core neighbouring layer, by the neigh_table_init_no_netlink() method.",
+      "if (!dont_send) { Before sending the ARP reply, you want to add the sender to your neighbouring table or update it; this is done with the neigh_event_ns() method."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "In the context of VoIP protocols, which protocol shares a similar operational structure with FTP as outlined in the IPv4 header's information regarding packet handling?",
+    "golden_answers": [
+      "SIP"
+    ],
+    "context": [
+      "The IPv4 header consists of information that defines how a packet should be handled by the kernel network stack: the protocol being used, the source and destination address, the checksum, the identification (id) of the packet that is needed for fragmentation, the TTL that helps avoiding packets being forwarded endlessly because of some error, and more.",
+      "Some protocols have different flows for data and for control—for example, FTP, the File Transfer Protocol, and SIP, the Session Initiation Protocol, which is a VoIP protocol.",
+      "lladdr = ndisc_opt_addr_data(ndopts.nd_opts_tgt_lladdr, dev);",
+      "if (arp->ar_op == htons(ARPOP_REQUEST) && ip_route_input_noref(skb, tip, sip, 0, dev) == 0) {"
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "What is the component of an IPv4 packet that starts with a length of at least 20 bytes and can trigger an ICMP error when the protocol field indicates a nonexistent protocol?",
+    "golden_answers": [
+      "IP HEADER"
+    ],
+    "context": [
+      "The TCP header length is 20 bytes, but it is scalable up to 60 bytes when using TCP options.",
+      "Every IPv4 packet starts with an IP header, which is at least 20 bytes long.",
+      "The kfree_skb() method frees the memory allocated for an SKB, while dev_kfree_skb() also handles the deallocation of data buffer used by the SKB.",
+      "When the protocol of the IP header (which is an 8-bit field) is a nonexistent protocol, an ICMP_DEST_UNREACH/ICMP_PROT_UNREACH is sent back to the sender because there is no protocol handler for such a protocol."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "In the context of the implementation of the gethostname() system call, what identifier is checked by the l2cap_recv_frame() method in the L2CAP header?",
+    "golden_answers": [
+      "CID"
+    ],
+    "context": [
+      "Now, the new gethostname() system call implementation is the following: SYSCALL_DEFINE2(gethostname, char __user *, name, int, len) { ... }",
+      "struct l2cap_hdr includes two fields: len and cid.",
+      "The l2cap_recv_acldata() method calls the l2cap_recv_frame() method, which fetches the L2CAP header (the l2cap_hdr object was described earlier) from the SKB.",
+      "The l2cap_recv_frame() method checks the channel id of the received packet by inspecting the cid of the l2cap_hdr object."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "What is the authentication sub-type used in management packets for authenticating wireless connections, as indicated in beacon data and management frames?",
+    "golden_answers": [
+      "IEEE80211_STYPE_AUTH"
+    ],
+    "context": [
+      "These beacons contain data in information elements, which constitute the data in the management packet.",
+      "This method performs authentication by sending a management packet with authentication sub-type (IEEE80211_STYPE_AUTH).",
+      "Another example: for a management frame, if the length of the SKB is less than the minimum (24), the packet is discarded and RX_DROP_MONITOR is returned.",
+      "It sends a management frame with authentication sub-type (IEEE80211_STYPE_AUTH)."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "What is produced by a program that selects a random number generator to create a dataset of N numbers after flipping a coin N times to observe heads?",
+    "golden_answers": [
+      "N NUMBERS"
+    ],
+    "context": [
+      "We then flip the coin N times, and see h heads.",
+      "4.15 We have a dataset {x} of N numbers, where the i'th number is x i .",
+      "Write a program that accepts ten dimensional vector θ...",
+      "A program chooses one of these random number generators uniformly and at random, then using that generator produces N numbers x 1,..., x N."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "What function is used to free the unique proc inode allocated during the initialization of a network namespace, which is created by another function during its setup?",
+    "golden_answers": [
+      "PROC_FREE_INUM()"
+    ],
+    "context": [
+      "static __net_init int net_ns_net_init(struct net *net) { return proc_alloc_inum(&net->proc_inum); }",
+      "The proc_alloc_inum() method is invoked by the network namespace initialization method, net_ns_net_init(), and it is freed by calling the proc_free_inum() method in the network namespace cleanup method, net_ns_net_exit().",
+      "The only thing that the net_ns_net_init() does is to allocate a unique proc inode for the newly created namespace by calling the proc_alloc_inum() method; the newly created unique proc inode number is assigned to net->proc_inum:",
+      "This unique proc inode is created by the proc_alloc_inum() method when the namespace is created, and is freed by the proc_free_inum() method when the namespace is released."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "Which document outlines the requirements for routers, while also referencing the limitations on packet size as per another RFC?",
+    "golden_answers": [
+      "RFC 1812"
+    ],
+    "context": [
+      "According to RFC 791, the minimum size is 576 bytes.",
+      "According to RFC 1812, it should contain as much of the original datagram as possible without the length of the ICMPv4 datagram exceeding 576 bytes.",
+      "In ICMPv6, there is no dispatch table like the icmp_pointers table in ICMPv4. The handlers are invoked according to the ICMPv6 message type, in a long switch(type) command.",
+      "I also mention in this chapter RFC 1122 (\\\"Requirements for Internet Hosts—Communication Layers\\\") which defines some requirements about several ICMP messages; RFC 4443, which defines the ICMPv6 protocol; and RFC 1812, which defines requirements for routers."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "In the context of online machine learning as discussed in Chapter 10 of _Real-time Machine Learning with Spark Streaming_, what term describes the time window used to define DStreams in Spark Streaming?",
+    "golden_answers": [
+      "BATCH INTERVAL"
+    ],
+    "context": [
+      "See <http://en.wikipedia.org/wiki/Online_machine_learning> for more details on online machine learning.",
+      "A DStream is defined by its input source and a time window called the batch interval.",
+      "Chapter 10, _Real-time Machine Learning with Spark Streaming_, provides an overview of Spark Streaming and how it fits in with online and incremental learning approaches to apply machine learning on data streams.",
+      "After about 10 seconds, which is the time of our streaming batch interval, Spark Streaming will trigger a computation on the stream due to our use of the `print` operator."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "In the context of transitioning from IPv4 to IPv6, which object is involved in an example that illustrates the probability of outcomes when flipping two fair six-sided versions of it?",
+    "golden_answers": [
+      "DICE"
+    ],
+    "context": [
+      "The need for DAD arises from the transition from IPv4 to IPv6, where address space is significantly larger.",
+      "The set of states is finite, though big.",
+      "Notice how probability is concentrated around zero, and how there is relatively little probability density for numbers with large absolute values.",
+      "Worked example 3.14 (Dice) describes flipping two fair six-sided dice and calculating a particular probability."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "What chapter provides an overview of SPARK STREAMING and discusses cryptography in the context of IPsec?",
+    "golden_answers": [
+      "CHAPTER 10"
+    ],
+    "context": [
+      "The next section briefly discusses cryptography in the context of IPsec.",
+      "Chapter 10 deals with IPsec, one of the most complex networking subsystems.",
+      "After about 10 seconds, which is the time of our streaming batch interval, Spark Streaming will trigger a computation on the stream due to our use of the `print` operator.",
+      "Chapter 10, _Real-time Machine Learning with Spark Streaming_, provides an overview of Spark Streaming and how it fits in with online and incremental learning approaches to apply machine learning on data streams."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "What protocol is used for translating between IP addresses and MAC addresses in IPv4 and is also enhanced by the Neighbour Discovery protocol in IPv6?",
+    "golden_answers": [
+      "ADDRESS RESOLUTION PROTOCOL (ARP)"
+    ],
+    "context": [
+      "For a typical data frame, though, only three addresses are used (for example, Access Point or AP/client communication).",
+      "various topics including Access point (AP), Address registration option (ARO), Address resolution protocol (ARP), etc.",
+      "Apart from error handling and diagnostics, ICMPv6 is used for the Neighbour Discovery (ND) protocol in IPv6, which replaces and enhances functions of ARP in IPv4.",
+      "The protocol that implements this translation is called the Address Resolution Protocol (ARP) in IPv4 and Neighbour Discovery protocol (NDISC or ND) in IPv6."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "What is the subsystem in the Linux kernel that provides an interface to userspace via the standard POSIX socket API and is maintained in two specific git repositories?",
+    "golden_answers": [
+      "LINUX KERNEL NETWORKING SUBSYSTEM"
+    ],
+    "context": [
+      "The iproute2 is developed over a git repository, which can be downloaded by: git clone git://git.kernel.org/pub/scm/linux/kernel/git/shemminger/iproute2.git.",
+      "The Linux Kernel Networking subsystem is maintained in two git repositories.",
+      "These two types of sockets and the POSIX-based socket API are also discussed in Chapter 11.",
+      "The Linux kernel networking subsystem provides an interface to the userspace by the standard POSIX socket API."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "Which chapter discusses both a complex networking subsystem like IPsec and real-time machine learning with Spark Streaming?",
+    "golden_answers": [
+      "CHAPTER 10"
+    ],
+    "context": [
+      "There are important kernel networking subsystems that are not described in any other book; for example, IPv6, IPsec, Wireless (IEEE 802.11), IEEE 802.15.4, NFC, InfiniBand, and more.",
+      "Chapter 10 deals with IPsec, one of the most complex networking subsystems.",
+      "We then created our data stream using a predefined streaming source, `socketTextStream`, which reads text from a socket host and port and creates a `DStream[String]`.",
+      "Chapter 10, _Real-time Machine Learning with Spark Streaming_, provides an overview of Spark Streaming and how it fits in with the online and incremental learning approaches to apply machine learning on data streams."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "What address type is managed in the arp_constructor() method when specific conditions related to the neighbour type are met, and what is the associated status update in the IP statistics for both multicast and broadcast types?",
+    "golden_answers": [
+      "RTN_BROADCAST"
+    ],
+    "context": [
+      "IP6_UPD_PO_STATS_BH(dev_net(skb_dst(skb)->dev), ip6_dst_idev(skb_dst(skb)), IPSTATS_MIB_INMCAST, skb->len);",
+      "if (rt->rt_type == RTN_MULTICAST) { IP_UPD_PO_STATS_BH(dev_net(rt->dst.dev), IPSTATS_MIB_INMCAST, skb->len); } else if (rt->rt_type == RTN_BROADCAST) IP_UPD_PO_STATS_BH(dev_net(rt->dst.dev), IPSTATS_MIB_INBCAST, skb->len);",
+      "struct dst_entry { ... }",
+      "There are also special treatment for broadcast addresses: in the arp_constructor() method, for example, when the neighbour type is RTN_BROADCAST, you set the neighbour hardware address (ha) to be the network device broadcast address (the broadcast field of the net_device object), and you set the nud_state to be NUD_NOARP."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "In a scenario where packets change destination addresses using DNAT rules, which layer is responsible for delivering these packets to their respective listening sockets, also while tracking potential failures in the L4 protocol?",
+    "golden_answers": [
+      "TRANSPORT LAYER"
+    ],
+    "context": [
+      "In the AMD server, the destination IPv4 address is changed to 192.168.1.8 by the DNAT rule, and the packets are sent to the laptop on the left.",
+      "If the packets are for local delivery, they will be delivered to the transport layer (L4) for handling by listening sockets.",
+      "the tcp_packet() method may sometimes fail: ret = l4proto->packet(ct, skb, dataoff, ctinfo, pf, hooknum, timeouts);",
+      "Now you try to find if the transport layer (L4) protocol can be tracked."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "What matrix is represented by the symbol $$\\\\mathcal{I}$$, which is orthonormal if it satisfies the condition $$\\\\mathcal{R}^{T}\\\\mathcal{R} = \\\\mathcal{I}$$?",
+    "golden_answers": [
+      "IDENTITY MATRIX"
+    ],
+    "context": [
+      "The i'th example has a feature vector, and each of these feature vectors is a d dimensional vector.",
+      "Now write 1 for the n-dimensional vector containing all ones, and ![$$\\\\mathcal{I}$$](A442674_1_En_10_Chapter_IEq70.gif) for the identity matrix.",
+      "Notice that there is a relationship between forming an SVD and diagonalizing a matrix.",
+      "A matrix ![$$\\\\mathcal{R}$$](A442674_1_En_15_Chapter_IEq6.gif) is orthonormal if ![$$\\\\mathcal{R}^{T}\\\\mathcal{R} = \\\\mathcal{I} = \\\\mathcal{I}^{T} = \\\\mathcal{R}\\\\mathcal{R}^{T}$$](A442674_1_En_15_Chapter_IEq7.gif)."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "What protocol specified in RFC 3810 manages multicast group management in IPv6 and is based on Multicast Listener Reports and Queries, while also involving a querier election mechanism among multiple routers?",
+    "golden_answers": [
+      "MLDV2 PROTOCOL"
+    ],
+    "context": [
+      "If there are several MLDv2 Routers on the same link, only one of them is selected to be the Querier, and all the other routers are set to be in a Non-Querier state.",
+      "The MLDv2 protocol is based on Multicast Listener Reports and Multicast Listener Queries.",
+      "According to RFC 3810, MLDv2 should be interoperable with nodes that implement MLDv1; an implementation of MLDv2 must support the following two MLDv1 message types:",
+      "In IPv6, multicast group management is handled by the MLDv2 protocol, which is specified in RFC 3810, from 2004."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "What entity must register with the RDMA stack to receive notifications about RDMA device status in a system that also deals with challenges such as varying packet sizes and addresses, particularly in client communication?",
+    "golden_answers": [
+      "CLIENT"
+    ],
+    "context": [
+      "In this section, I covered the RDMA stack organization and the kernel modules that are part of it in the Linux kernel.",
+      "The client needs to register with the RDMA stack in order to be notified about any RDMA device that is being added to the system or removed from it.",
+      "The main challenges for implementing 6LoWPAN include different packet sizes and different addresses.",
+      "For a typical data frame, though, only three addresses are used (for example, Access Point or AP/client communication)."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "What do supervised learning methods require along with the feature vector, and how is the target variable determined in the context of online advertising?",
+    "golden_answers": [
+      "TARGET VARIABLE"
+    ],
+    "context": [
+      "Categories of machine learning include supervised learning, unsupervised learning, and components of a data-driven machine learning system.",
+      "In addition, for supervised learning methods such as classification and regression, we need to provide the target variable (or variables in the case of multiclass situations) together with the feature vector.",
+      "We have that ![\\\\displaystyle\\\\begin{array}{rcl} P(\\\\mathcal{B}\\\\vert \\\\mathcal{A}) + P(\\\\mathcal{B}^{c}\\\\vert \\\\mathcal{A}) = cP(\\\\mathcal{B}\\\\cap \\\\mathcal{A}) + cP(\\\\mathcal{B}^{c} \\\\cap \\\\mathcal{A}) = cP(\\\\mathcal{A}) = 1,& & {}\\\\\\\\ \\\\end{array}](A442674_1_En_3_Chapter_Equ8.gif)",
+      "In this case, the target variable would be 0 (often assigned the class label of -1 in mathematical treatments) if no click was observed for a given advert displayed on a web page (called an impression)."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "In the context of memory registration and attribute retrieval for a specific memory region in computer systems, what is the key identifier used alongside the registered memory region?",
+    "golden_answers": [
+      "LKEY"
+    ],
+    "context": [
+      "The ib_query_mr() method retrieves the attributes of a specific MR. It will return 0 on success or the errno value with the reason for the failure.",
+      "struct ib_mr_attr {",
+      "The memory pages permission is checked to ensure that the requested permissions for the MR is supported by them.",
+      "The used lkey is from the MR that was registered using ib_get_dma_mr()."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "In the context of linear algebra, what term is used to describe a matrix that has eigenvectors associated with specific eigenvalues and also satisfies the property of being equal to its transpose?",
+    "golden_answers": [
+      "SYMMETRIC"
+    ],
+    "context": [
+      "If we have \\\\mathcal{S}\\\\mathbf{u} =\\\\lambda \\\\mathbf{u} then u is referred to as an eigenvector of \\\\mathcal{S} and λ is the corresponding eigenvalue.",
+      "Remember These Definitions",
+      "Write ![\\\\mathcal{S}] for the event that the patient is sick; ![\\\\mathcal{D}_{i}^{+}] for the event that the i'th repetition of the test reports positive; and ![\\\\mathcal{D}_{i}^{-}] for the event that the i'th repetition of the test reports negative.",
+      "Assume that \\\\mathcal{S} is symmetric and positive semidefinite."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "What machine learning algorithm utilizes hinge loss during its training process, and can also be trained using stochastic gradient descent?",
+    "golden_answers": [
+      "SUPPORT VECTOR MACHINE"
+    ],
+    "context": [
+      "To compare the performance and use of different models, we will train a model using logistic regression, SVM, naive Bayes, and a decision tree.",
+      "The first one is logistic loss, which equates to a model known as **logistic regression**, while the second one is the hinge loss, which is equivalent to a linear **Support Vector Machine** ( **SVM** ).",
+      "Setting up stochastic gradient descent: We have estimates a (n) and b (n) of the classifier parameters, and we want to improve the estimates.",
+      "Write a program to train a support vector machine on this data using stochastic gradient descent."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "In online advertising, when predicting outcomes through various model tuning techniques, what is a type of model that can account for a target variable that may result in a continuous real value?",
+    "golden_answers": [
+      "REGRESSION MODELS"
+    ],
+    "context": [
+      "In this case, the target variable would be 0 (often assigned the class label of -1 in mathematical treatments) if no click was observed for a given advert displayed on a web page (called an impression).",
+      "When dealing with regression models, it is very unlikely that our model will precisely predict the target variable, because the target variable can take on any real value.",
+      "5. Building a Classification Model with Spark",
+      "This example demonstrates how regularization can be used to control overfitting issues in regression models."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "What statistical method is used to evaluate treatment effects when analyzing groups that should display similar outcomes if no effect is present, and can be demonstrated using the survival data of Titanic passengers?",
+    "golden_answers": [
+      "ONE-WAY ANOVA"
+    ],
+    "context": [
+      "Procedure 9.2 (Estimating Confidence Intervals for Maximum Likelihood Estimates Using Simulation) assumes we have a dataset ![ $$\\\\mathcal{D} =\\\\{ x\\\\}$$ ].",
+      "You will find a dataset recording the survival status of passengers on the Titanic at http://www.statsci.org/data/general/titanic.html.",
+      "If there is no effect of a treatment the boxes in a graph should look the same.",
+      "Evaluating treatment effects with a one-way ANOVA."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "What message families are involved in the management and lookup of neighbouring entries in networking, specifically in relation to the resources of neighbouring tables?",
+    "golden_answers": [
+      "NEIGH"
+    ],
+    "context": [
+      "When creating a new mount namespace, the following rules apply:",
+      "The NETLINK_ROUTE messages can be divided into families.",
+      "This method frees the resources of the specified neighbouring table.",
+      "neigh = neigh_lookup(&nd_tbl, &msg->target, dev);"
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "What is the structure that includes the dst object and was modified by the removal of the rt_spec_dst member?",
+    "golden_answers": [
+      "RTABLE STRUCTURE"
+    ],
+    "context": [
+      "Let’s take a look at the xfrm_lookup() method: struct dst_entry *xfrm_lookup(struct net *net, struct dst_entry *dst_orig, const struct flowi *fl, struct sock *sk, int flags).",
+      "The following is the rtable structure; as you can see, the dst object is the first object in this structure:",
+      "This method made the rt_spec_dst member of the rtable structure unneeded, and rt_spec_dst was removed from the rtable structure as a result.",
+      "Both nh_rth_input and nh_pcpu_rth_output are instances of the rtable structure."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "In the context of transport layer protocols, how does a UDP packet sent from a Linux desktop to a specific destination port illustrate the importance of tracking the destination IP address involved in the checksum calculation?",
+    "golden_answers": [
+      "DESTINATION IP ADDRESS"
+    ],
+    "context": [
+      "Now you try to find if the transport layer (L4) protocol can be tracked.",
+      "The transport layer checksum calculation takes into account the source and destination of the IP addresses.",
+      "The right side machine (the Linux desktop) sends UDP packets to 192.168.1.9 with UDP destination port of 9999.",
+      "This DNAT rule specifies that incoming UDP packets on port 9999 will change their destination IP address to 192.168.1.8."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "What is the method used to delete a multicast virtual interface among the supported socket options and the traffic priority manipulation techniques?",
+    "golden_answers": [
+      "MRT_DEL_VIF"
+    ],
+    "context": [
+      "It is true that an application can set the priority of its traffic via the setsockopt() system call with SO_PRIORITY, but this is not always possible.",
+      "This method deletes a multicast virtual interface; it is invoked by calling setsockopt() from userspace with MRT_DEL_VIF.",
+      "The supported socket options are MRT_VERSION, MRT_ASSERT and MRT_PIM.",
+      "The supported socket options are: MRT_INIT, MRT_DONE, MRT_ADD_VIF, MRT_DEL_VIF, MRT_ADD_MFC, MRT_DEL_MFC, MRT_ADD_MFC_PROXY, MRT_DEL_MFC_PROXY, MRT_ASSERT, MRT_PIM (when PIM support is set), and MRT_TABLE (when Multicast Policy Routing is set)."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "What substance is investigated in an experiment regarding treatments and is also analyzed in an ANOVA table alongside an antidote?",
+    "golden_answers": [
+      "POISON"
+    ],
+    "context": [
+      "An experiment tries to evaluate the effects of one or more treatments.",
+      "Worked example 8.5 (Poison and Treatment) Investigate the effects of poison and treatment, using the data at http://​www.​statsci.​org/​data/​general/​poison.​html.",
+      "Instead, there is likely to be some error. The residual is the vector which gives the difference between the true value and the model's prediction at each point.",
+      "I obtained the following ANOVA table | DOF | Sum Sq | Mean Sq | F value | Pr( > F) Poison | 2 | 1.03301 | 0.51651 | 23.2217 | 3.331e-07 Antidote | 3 | 0.92121 | 0.30707 | 13.8056 | 3.777e-06 Poison: Antidote | 6 | 0.25014 | 0.04169 | 1.8743 | 0.1123 Residuals | 36 | 0.80073 | 0.02224."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "In a networking context, what is the unique proc inode number associated with the namespace structures and how is it created?",
+    "golden_answers": [
+      "PROC_INUM"
+    ],
+    "context": [
+      "unique proc inode is created by the proc_alloc_inum() method, which also assigns proc_inum to be the proc inode number.",
+      "Each of the six namespace structures contains an integer member called proc_inum, which is the namespace unique proc inode number and is assigned by calling the proc_alloc_inum() method.",
+      "Like in IPv4, we can manage adding and deleting routing entries and displaying the routing tables with the ip route command of iproute2 and with the route command of net-tools.",
+      "Here is a short description of several members of the net structure: ..."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "What module is responsible for defining the ARP table in IPv4, while another module defines the NDSIC table in IPv6, and both use their methods for protocol-specific operations?",
+    "golden_answers": [
+      "ARP MODULE"
+    ],
+    "context": [
+      "The ARP table (arp_tbl) is an instance of the neigh_table structure.",
+      "In IPv4, the ARP module defines the ARP table (an instance of the neigh_table structure named arp_tbl) and passes it as an argument to the neigh_table_init() method.",
+      "In IPv6, the NDISC module defines the NDSIC table (which is also an instance of the neigh_table structure named nd_tbl) and passes it as an argument to the neigh_table_init() method.",
+      "The ARP and NDISC modules utilize their respective methods to handle protocol-specific operations."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "Which chapter discusses the process of obtaining a unique address for hosts and also explores how to create a clustering model with Spark?",
+    "golden_answers": [
+      "CHAPTER 7"
+    ],
+    "context": [
+      "Autoconfiguration is a mechanism that allows a host to obtain or create a unique address for each of its interfaces.",
+      "Finding the MAC address of a host based on its IP address is the task of the neighbouring subsystem, discussed in Chapter 7.",
+      "So, if we use these factor vector representations of each movie as inputs to our clustering model, we will end up with a clustering that is based on the actual rating behavior of users rather than manual genre assignments.",
+      "Chapter 7, _Building a Clustering Model with Spark_, explores how to create a clustering model as well as how to use related evaluation methodologies."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "In the context of network protocols, what layer is referred to when moving data from the transport layer (L4) to the layer that follows the Ethernet header?",
+    "golden_answers": [
+      "L3"
+    ],
+    "context": [
+      "In the case of Ethernet, this is a 48-bit address, the MAC address which is assigned for each Ethernet network interface.",
+      "When the packet was in L2, in the network device driver Rx path, skb->data pointed to the L2 (Ethernet) header; now that the packet is going to be moved to Layer 3, immediately after the call to the eth_type_trans() method, skb->data should point to the network (L3) header, which starts immediately after the Ethernet header.",
+      "They will be delivered to the transport layer (L4) for handling by listening sockets.",
+      "This method moves packets from L4 (the transport layer) to L3 (the network layer), invoked for example from TCPv4."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "In what context can we determine the significance of axes when analyzing a collection of simulated datasets and comparing scatterplot matrices? Even as they change, what do we learn about the original data?",
+    "golden_answers": [
+      "AXES"
+    ],
+    "context": [
+      "So we compute a collection of simulated datasets, ![ $$\\\\mathcal{D}_{i}$$ ], each the same size as the original dataset.",
+      "Now the blob looks like an axis-aligned ellipsoid, and we can reason about (a) what axes are 'big' and (b) what that means about the original dataset.",
+      "Plot a scatterplot matrix of this dataset, showing each species with a different marker.",
+      "Translating a blob of data doesn't change the scatterplot matrix in any interesting way (the axes change, but the picture doesn't)."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "What is the process called that removes a multicast virtual interface using a specific socket option in userspace alongside the supported socket options available for multicast routing?",
+    "golden_answers": [
+      "MRT_DEL_VIF"
+    ],
+    "context": [
+      "This is done by creating a socket in userspace and calling setsockopt() with IPPROTO_IP and with the IP_ADD_MEMBERSHIP socket option.",
+      "This method deletes a multicast virtual interface; it is invoked by calling setsockopt() from userspace with MRT_DEL_VIF.",
+      "The supported socket options are MRT_VERSION, MRT_ASSERT and MRT_PIM.",
+      "The supported socket options are: MRT_INIT, MRT_DONE, MRT_ADD_VIF, MRT_DEL_VIF, MRT_ADD_MFC, MRT_DEL_MFC, MRT_ADD_MFC_PROXY, MRT_DEL_MFC_PROXY, MRT_ASSERT, MRT_PIM (when PIM support is set), and MRT_TABLE (when Multicast Policy Routing is set)."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "What statistical method is introduced through a powerful procedure that helps analyze the effects of different poisons using box plots and results in a structured output displaying statistical measures?",
+    "golden_answers": [
+      "ANOVA TABLE"
+    ],
+    "context": [
+      "It is possible to come up with a procedure that makes a more precise recommendation by penalizing clusterings that use a large k.",
+      "The ANOVA Table introduces a powerful and useful procedure that I can name and put in a box.",
+      "Use box plots to investigate whether the poisons have different effects for antidote 1.",
+      "I obtained the following ANOVA table | DOF | Sum Sq | Mean Sq | F value | Pr( > F) Poison | 2 | 1.03301 | 0.51651 | 23.2217 | 3.331e-07 Antidote | 3 | 0.92121 | 0.30707 | 13.8056 | 3.777e-06 Poison: Antidote | 6 | 0.25014 | 0.04169 | 1.8743 | 0.1123 Residuals | 36 | 0.80073 | 0.02224."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "In what context can you consider the births in Carcelle-le-Grignon at the end of the eighteenth century as a fair random sample when estimating the population standard deviation?",
+    "golden_answers": [
+      "FAIR RANDOM SAMPLE"
+    ],
+    "context": [
+      "Estimating the Population Standard Deviation.",
+      "You can regard this as a fair random sample (with replacement, though try not to think too hard about what that means) of births.",
+      "Are boys and girls equiprobable? In Carcelle-le-Grignon at the end of the eighteenth century, there were 2009 births.",
+      "You can regard this as a fair random sample of births."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "What programming language is commonly used alongside Scala and R for writing data manipulation programs, particularly in the context of implementing algorithms like K-means clustering?",
+    "golden_answers": [
+      "PYTHON"
+    ],
+    "context": [
+      "The first step to a Spark program in Scala is to write a basic Spark program to manipulate a dataset.",
+      "We will start with Scala and then write the same program in Java and Python.",
+      "S_{\\\\infty } = \\\\frac{1} {1 - r}",
+      "K-means clustering is often implemented in various programming languages and software platforms, such as Python and R."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "In which chapter is the neighbouring subsystem's function of obtaining a host's MAC address discussed, and also covers how to build a clustering model with Spark?",
+    "golden_answers": [
+      "CHAPTER 7"
+    ],
+    "context": [
+      "The neigh_statistics structure is important for monitoring the neighbouring subsystem;",
+      "Finding the MAC address of a host based on its IP address is the task of the neighbouring subsystem, discussed in Chapter 7.",
+      "So, if we use these factor vector representations of each movie as inputs to our clustering model, we will end up with a clustering that is based on the actual rating behavior of users rather than manual genre assignments.",
+      "Chapter 7, _Building a Clustering Model with Spark_, explores how to create a clustering model as well as how to use related evaluation methodologies."
+    ],
+    "nhops": 4
+  },
+  {
+    "question": "What process is involved in reassembling fragments of a packet in the kernel networking stack, particularly in relation to the traversal of packets and the IPv4 header?",
+    "golden_answers": [
+      "DEFRAGMENTATION"
+    ],
+    "context": [
+      "This chapter covered other important topics related to the traversal of a packet in the kernel networking stack, such as the lookup in the routing subsystem, fragmentation and defragmentation, protocol handler registration, and more.",
+      "Defragmentation is the process of reassembling all the fragments of a packet, which all have the same id in the IPv4 header, into one buffer.",
+      "Defragmentation."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What important features are derived from data processing, particularly mentioned in relation to the boilerplate variable and involved in the feature extraction process?",
+    "golden_answers": [
+      "TEXT FEATURES"
+    ],
+    "context": [
+      "3. Obtaining, Processing, and Preparing Data with Spark",
+      "Notice that there are still features that we have not yet used; most notably, the text features in the boilerplate variable.",
+      "Extracting text features from the data."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What is the flag set on the last netlink message and how is it defined among the basic netlink message header types?",
+    "golden_answers": [
+      "NLMSG_DONE"
+    ],
+    "context": [
+      "into smaller ones, and each of them (except the last one) has the NLM_F_MULTI flag set. The last message has the NLMSG_DONE flag set.",
+      "the last message has the NLMSG_DONE flag set.",
+      "There are four basic netlink message header types: NLMSG_NOOP, NLMSG_ERROR, NLMSG_DONE, NLMSG_OVERRUN."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What statistical distribution is used when the sample size is small and has N − 1 degrees of freedom, compared to another distribution that is used when the sample size is large?",
+    "golden_answers": [
+      "T-DISTRIBUTION"
+    ],
+    "context": [
+      "T-distribution",
+      "has a t-distribution with N − 1 degrees of freedom.",
+      "Here the probability distribution we use is either a t-distribution with N − 1 degrees of freedom, or a normal distribution if N is sufficiently large."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What term is used to describe the number of times an outcome occurs in repeated experiments, and is also related to the channel a station operates on in wireless communication?",
+    "golden_answers": [
+      "FREQUENCY"
+    ],
+    "context": [
+      "Remember this: The probability of an outcome is the frequency of that outcome in a very large number of repeated experiments.",
+      "This justifies our model of probability as frequency.",
+      "Note that there is a one-to-one correspondence between a channel in which a station operates and the frequency in which it operates; the ieee80211_channel_to_frequency() method (net/wireless/util.c) returns the frequency in which a station operates, given its channel."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "In which file are the implementations of both the clone() and unshare() system calls located, as well as the descriptions of the CLONE_NEW* flags that support namespace creation?",
+    "golden_answers": [
+      "KERNEL/FORK.C"
+    ],
+    "context": [
+      "The implementation of the clone() system call is in kernel/fork.c.",
+      "The implementation of the unshare() system call is found in kernel/fork.c.",
+      "The six CLONE_NEW* flags, which were added to support the creation of namespaces, are described later in this section."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What mathematical structures can have eigenvalues, be represented in programming libraries as two-dimensional classes, and include singular value decomposition in their properties?",
+    "golden_answers": [
+      "MATRICES"
+    ],
+    "context": [
+      "15.1 Useful Material About Matrices 355",
+      "Note that using jblas, vectors are represented as a one-dimensional `DoubleMatrix` class, while matrices are a two-dimensional `DoubleMatrix` class.",
+      "Matrices don't have to be symmetric to have eigenvectors and eigenvalues, but the symmetric case is the only one of interest to us."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What network technology employs a 48-bit MAC address and determines packet type based on this address while managing transmission collisions?",
+    "golden_answers": [
+      "ETHERNET"
+    ],
+    "context": [
+      "In the case of Ethernet, this is a 48-bit address, the MAC address which is assigned for each Ethernet network interface.",
+      "For Ethernet, the packet type depends on the destination MAC address in the ethernet header.",
+      "With Ethernet, a station starts to transmit when the medium is idle; if a collision is detected during transmission, it stops, and a random backoff period starts."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What feature is set for network namespace local devices and can be checked with the ethtool package?",
+    "golden_answers": [
+      "NETIF_F_NETNS_LOCAL"
+    ],
+    "context": [
+      "NETIF_F_NETNS_LOCAL is set for network namespace local devices.",
+      "except for network namespace local devices, which are network devices whose NETIF_F_NETNS_LOCAL feature is set; such network devices are deleted.",
+      "In ethtool, support was added to enable to find out whether the NETIF_F_NETNS_LOCAL feature is set for a specified network interface."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What type of terms are assigned lower importance in text processing techniques such as TF-IDF weighting, and are also found to overlap frequently in different documents?",
+    "golden_answers": [
+      "COMMON TERMS"
+    ],
+    "context": [
+      "The end result is that truly rare or important terms should be assigned higher weighting, while more common terms (which are assumed to have less importance) should have less impact in terms of weighting.",
+      "TF-IDF weighting will tend to assign a lower weighting to common terms.",
+      "we might reasonably expect that even very different documents might contain many overlapping terms that are relatively common (for example, our stop words)."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What term is used to describe the penalty term added to minimize the error during regression, which may not significantly alter the line but can enhance values with respect to new data?",
+    "golden_answers": [
+      "REGULARIZER"
+    ],
+    "context": [
+      "Instead of choosing the value of β that minimizes !\"$$\\\\displaystyle{\\\\left \\( \\\\frac{1} {N}\\\\right \\)\\(\\\\mathbf{y} -\\\\mathcal{X}\\\\beta \\)^{T}\\(\\\\mathbf{y} -\\\\mathcal{X}\\\\beta \\)}$$, we minimize !\"$$\\\\displaystyle\\\\begin{array}{rcl} \\\\left \\( \\\\frac{1} {N}\\\\right \\)\\(\\\\mathbf{y} -\\\\mathcal{X}\\\\beta \\)^{T}\\(\\\\mathbf{y} -\\\\mathcal{X}\\\\beta \\)& +& \\\\lambda \\\\beta ^{T}\\\\beta {}\\\\\\\\ \\\\mbox{ Error}& +& \\\\mbox{ Regularizer} {}\\\\\\\\ \\\\end{array}$$.",
+      "The penalty term is often referred to as a regularizer.",
+      "In this case, the regularizer doesn't change the line much, but may produce improved values on new data."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "In the context of the namespace structures in operating systems, what integer member is unique to each structure and is assigned by a specific method related to process management?",
+    "golden_answers": [
+      "PROC_INUM"
+    ],
+    "context": [
+      "struct uts_namespace { struct kref kref; struct new_utsname name; struct user_namespace *user_ns; unsigned int proc_inum; };",
+      "Each of the six namespace structures contains an integer member called proc_inum, which is the namespace unique proc inode number and is assigned by calling the proc_alloc_inum() method.",
+      "Here is a short description of several members of the net structure: ..."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "In networking, what is the type associated with packets that must be accepted locally as broadcasts and also involves updating packet statistics in specific conditions during transmission?",
+    "golden_answers": [
+      "RTN_BROADCAST"
+    ],
+    "context": [
+      "if (rt->rt_type == RTN_MULTICAST) { IP_UPD_PO_STATS_BH(dev_net(rt->dst.dev), IPSTATS_MIB_INMCAST, skb->len); } else if (rt->rt_type == RTN_BROADCAST) IP_UPD_PO_STATS_BH(dev_net(rt->dst.dev), IPSTATS_MIB_INBCAST, skb->len);",
+      "Other types you will encounter in this book are the RTN_BROADCAST type, for packets that should be accepted locally as broadcasts.",
+      "There are also special treatment for broadcast addresses: in the arp_constructor() method, for example, when the neighbour type is RTN_BROADCAST, you set the neighbour hardware address (ha) to be the network device broadcast address (the broadcast field of the net_device object), and you set the nud_state to be NUD_NOARP."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What specification defines the ICMPv6 protocol and is referenced alongside other crucial requirements for internet communication?",
+    "golden_answers": [
+      "RFC 4443"
+    ],
+    "context": [
+      "ICMPv6 is defined in RFC 4443.",
+      "I also mention in this chapter RFC 1122 (\\\"Requirements for Internet Hosts—Communication Layers\\\") which defines some requirements about several ICMP messages; RFC 4443, which defines the ICMPv6 protocol; and RFC 1812, which defines requirements for routers.",
+      "This is done in accordance with section 2.4 (\\\"Message Processing Rules\\\") of RFC 4443."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "In networking, what type of addresses are used in Layer 2 protocols, such as HWMP and Ethernet, and are distinct from IP addresses used in Layer 3 protocols?",
+    "golden_answers": [
+      "MAC ADDRESSES"
+    ],
+    "context": [
+      "The HWMP protocol works with Layer 2 and deals with MAC addresses, as opposed to the IPV4 routing protocol, for example, which works with Layer 3 and deals with IP addresses.",
+      "MAC addresses",
+      "When working with Ethernet, the addresses are called MAC addresses and are 48-bit values."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What subsystem is discussed in Chapter 14 of a book on advanced topics and is essential for managing devices in computing systems?",
+    "golden_answers": [
+      "PCI SUBSYSTEM"
+    ],
+    "context": [
+      "Chapter 14 concludes the book with a discussion of advanced topics such as Linux namespaces and network namespaces in particular, Busy Poll Sockets, the Bluetooth subsystem, the IEEE 802.15.4 subsystem, the Near Field Communication (NFC) subsystem, the PCI subsystem, and more.",
+      "The PCI Subsystem facilitates the management of Peripheral Component Interconnect devices.",
+      "\"The PCI subsystem is integral for hardware compatibility and performance in computing systems.\"<"
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "In what mode does IPsec operate when it directly encrypts data at the transport layer, as opposed to creating a secure tunnel for the entire packet?",
+    "golden_answers": [
+      "TRANSPORT MODE"
+    ],
+    "context": [
+      "Suppose you work in transport mode in IPv4, and you receive an ESP packet that is destined to the local host.",
+      "transport mode",
+      "IPsec has two modes of operation: transport mode and tunnel mode."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What is the term used to describe the IPv6 address that consists of all zeroes and is sent in a Neighbour Solicitation DAD message when the target is a tentative address?",
+    "golden_answers": [
+      "UNSPECIFIED ADDRESS"
+    ],
+    "context": [
+      "This method returns 1 when the given IPv6 address is the unspecified address of all zeroes (IPV6_ADDR_ANY).",
+      "The address of all zeroes (0:0:0:0:0:0:0:0) is called the unspecified address.",
+      "The host sends a Neighbour Solicitation DAD message. The target is its tentative address, the source is all zeros (the unspecified address)."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What term is used to describe the structure that a tree creates in feature space, which can also refer to the number of axes used to produce scatterplots in data visualization?",
+    "golden_answers": [
+      "DIMENSIONS"
+    ],
+    "context": [
+      "dimensions, and the structure that the tree produces in the feature space.",
+      "If there are relatively few dimensions, you could just choose two (or three) of them and produce a 2D (or 3D) scatterplot.",
+      "the relationship between K and dimensions assists in understanding the complexity of data"
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What is the layer in networking that is defined by its theoretical principles and guides protocol tracking and error handling, specifically related to the ICMP protocol discussed in Chapter 3?",
+    "golden_answers": [
+      "NETWORK LAYER"
+    ],
+    "context": [
+      "I focus on the essence of the implementation of each network layer and the theory guidelines and principles that led to this implementation.",
+      "First you try to find whether the network layer (L3) protocol can be tracked: l3proto = __nf_ct_l3proto_find(pf);",
+      "In Chapter 3 you will learn about the ICMP protocol, which helps to keep the system behaving correctly by sending error and control messages about the network layer (L3)."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What transport protocol, which uses the ip6_xmit() method and does not have a checksum covering the IP header, is also associated with the lksctp-tools project?",
+    "golden_answers": [
+      "SCTP"
+    ],
+    "context": [
+      "Also in IPv6, there are two main methods for sending IPv6 packets from Layer 4, the transport layer: the first is the ip6_xmit() method, which is used by the TCP, Stream Control Transmission Protocol (SCTP), and Datagram Congestion Control Protocol (DCCP) protocols.",
+      "There are protocols where the checksum does not cover the IP header (like SCTP), so this problem does not occur there.",
+      "Regarding using sockets for SCTP, I should mention the lksctp-tools project ( http://lksctp.sourceforge.net/ )."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What term is used to denote the covariance matrix that can be estimated using maximum likelihood and can also be expressed in the context of standard deviation and ranges related to dimensions m and p?",
+    "golden_answers": [
+      "SIGMA"
+    ],
+    "context": [
+      "The maximum likelihood estimate of the covariance Sigma is Covmat({x}).",
+      "range 1 to min(m, p). So if ![$$\\\\Sigma$$](A442674_1_En_15_Chapter_IEq40.gif) is tall and thin, the top square is diagonal and everything else is zero; if ![$$\\\\Sigma$$](A442674_1_En_15_Chapter_IEq41.gif) is short and wide, the left square is diagonal and everything else is zero.",
+      "It is common to see this in another form, obtained by writing σ for the standard deviation of X, substituting kσ for a, and rearranging."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What protocol is involved in the sending of error messages at the network layer, is subject to security threats like spoofing, and also used in attacks such as the Smurf Attack?",
+    "golden_answers": [
+      "ICMP PROTOCOL"
+    ],
+    "context": [
+      "Keep in mind that the ICMP protocol is also used for various security attacks; for example, the Smurf Attack is a denial-of-service attack in which large numbers of ICMP packets with the intended victim's spoofed source IP are sent as broadcasts to a computer network using an IP broadcast address.",
+      "In Chapter 3 you will learn about the ICMP protocol, which helps to keep the system behaving correctly by sending error and control messages about the network layer (L3).",
+      "Keep in mind that the ARP protocol, like the ICMP protocol discussed in Chapter 3, is subject to security threats—such as ARP poisoning attacks and ARP spoofing attacks (security aspects of the ARP protocol are beyond the scope of this book)."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What statistical model is used to describe datasets involving intervals, estimate intensity from observed intervals, and model occurrences, particularly swearing?",
+    "golden_answers": [
+      "POISSON MODEL"
+    ],
+    "context": [
+      "of the intervals, then the resulting dataset would be described by a Poisson model with parameter 2λ; similarly, if you halved the length of the intervals, the best model would have parameter λ∕2.",
+      "Assume we have only the first 10 intervals of observations, and we wish to estimate the intensity using a Poisson model.",
+      "We model the swearing with a Poisson model."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What are the mistakes that bookmakers account for in their probability estimates and that are also managed in the context of physical topology and network responsibilities?",
+    "golden_answers": [
+      "ERRORS"
+    ],
+    "context": [
+      "The bookmaker doesn't actually know the probability that a particular horse will win, and must account for errors in this estimate.",
+      "Discovering physical topology, assigning LIDs, configuring forwarding tables, and handling errors are part of the SM's responsibilities.",
+      "They may simply be errors."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What communication protocol is utilized for managing multicast group memberships in IPv6 networks and discussed alongside various IPv6 topics in Chapter 8?",
+    "golden_answers": [
+      "MLD PROTOCOL"
+    ],
+    "context": [
+      "the MLD protocol, which also uses ICMPv6 messages, is covered in Chapter 8.",
+      "The MLD protocol is a standard communication protocol used for managing multicast group memberships in IPv6 networks.",
+      "I discussed various IPv6 topics, like IPv6 addresses (including Special Addresses and Multicast Addresses), how the IPv6 header is built, what the IPv6 extension headers are, the autoconfiguration process, the Rx path in IPv6, and the MLD protocol."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What are the types of programs that manage the Forwarding Information Base (FIB) and can also implement routing protocols like BGP and OSPF, sometimes incorporating special hardware enhancements?",
+    "golden_answers": [
+      "USERSPACE ROUTING DAEMONS"
+    ],
+    "context": [
+      "In this case, management of the FIB is done usually by userspace routing daemons, sometimes in conjunction with special hardware enhancements.",
+      "The routing entry could also be added by userspace routing daemons, like ZEBRA, XORP, MROUTED, and more.",
+      "By userspace routing daemons which implement routing protocols like BGP, EGP, OSPF, or others."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What is the unique identifier used in Ethernet that is referenced in the source hardware address and is crucial for the initialization of PPPoE protocol?",
+    "golden_answers": [
+      "MAC ADDRESS"
+    ],
+    "context": [
+      "The SHA: The source hardware address (the MAC address, which is 6 bytes).",
+      "The pppoe_init() method is used to register protocol handlers and initializes the PPPoE protocol.",
+      "In Ethernet, which is the most commonly used link layer (L2), the L2 address of a host is its MAC address."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What type of model is capable of distinguishing between different classes of documents after an extensive testing phase and requires feature extraction post data processing?",
+    "golden_answers": [
+      "MACHINE LEARNING MODEL"
+    ],
+    "context": [
+      "we would expect that a machine learning model, such as a classifier, would be able to learn weightings for individual terms; this would allow it to distinguish between documents from different classes.",
+      "In practice, an extensive testing phase is required to find the most suitable configuration before deploying any machine learning model in production.",
+      "Once we have completed the initial exploration, processing, and cleaning of our data, we are ready to get down to the business of extracting actual features from the data, with which our machine learning model can be trained."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What mechanism allows efficient management of receive requests in a single queue and is involved in asynchronous events related to receive request handling?",
+    "golden_answers": [
+      "SRQ"
+    ],
+    "context": [
+      "int ib_modify_srq(struct ib_srq *srq, struct ib_srq_attr *srq_attr, enum ib_srq_attr_mask srq_attr_mask);",
+      "If this is an SRQ event, the SRQ on which the asynchronous event occurred.",
+      "SRQ allows managing Receive Requests in a single queue, preventing starvation in RC QPs."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What are the tools that include the older Wireless Tools for managing wireless devices, conntrack-tools for Connection Tracking administration, and help with interface assignment issues in Linux?",
+    "golden_answers": [
+      "USERSPACE TOOLS"
+    ],
+    "context": [
+      "You cannot assign the unspecified address to an interface by using userspace tools like the ip command or the ifconfig command.",
+      "There are two sets of userspace tools for managing wireless devices and networks in Linux: one is the older Wireless Tools for Linux, an open source project based on IOCTLs.",
+      "There are some userspace tools (conntrack-tools) for Connection Tracking administration mentioned in the 'Quick Reference' section at the end of this chapter."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What does the value of the nexthdr indicate when there are no extension headers or when it is zero in the context of IPV6, as seen in functions involving IPPROTO values and parsing methods?",
+    "golden_answers": [
+      "NEXTHDR"
+    ],
+    "context": [
+      "nexthdr: When there are no extension headers, this will be the upper layer protocol number, like IPPROTO_UDP (17) for UDP or IPPROTO_TCP (6) for TCP.",
+      "int xfrm_input(struct sk_buff *skb, int nexthdr, __be32 spi, int encap_type);",
+      "If the value of the nexthdr of the IPV6 header is 0, this indicates a Hop-by-Hop Options header, and it is parsed by calling the ipv6_parse_hopopts() method."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What is the significance of the low order bit of the \"_skb_refdst,\" and how does it relate to reference counting and destination entry addresses?",
+    "golden_answers": [
+      "_SKB_REFDST"
+    ],
+    "context": [
+      "The low order bit of _skb_refdst is set if the reference counter was not taken.",
+      "unsigned long orefdst = skb->_skb_refdst;",
+      "The unsigned long _skb_refdst is the destination entry address."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What type of mathematical object is defined as symmetric and positive semidefinite, and can have its rank analyzed in terms of vectors, while also being able to provide its maximum value through a code statement?",
+    "golden_answers": [
+      "MATRIX"
+    ],
+    "context": [
+      "Assume that \\\\mathcal{S} is symmetric and positive semidefinite.",
+      "D) depends on D, so they're not independent. Another way is to notice that the rank of the table, as a matrix, is 6, which means that it can't be the outer product of two vectors.",
+      "The following code statement will print the maximum value of the matrix:"
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What major technology company has contributed developers to both the RPS feature and the cgroup project, enhancing performance in networking infrastructure?",
+    "golden_answers": [
+      "GOOGLE"
+    ],
+    "context": [
+      "The RPS feature was contributed by developers from Google.",
+      "The cgroup project was started in 2005 by developers from Google (Paul Manage, Rohit Seth, and others).",
+      "The RPS feature saw contributions from Google developers to enhance performance in networking infrastructure."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What term is used to describe the acknowledgment response that confirms receipt of a message or request, and can be sent in various networking contexts including after an ADDBA request, multiple packet acknowledgments, and netlink messages?",
+    "golden_answers": [
+      "ACK"
+    ],
+    "context": [
+      "When the other side (the recipient) receives the ADDBA request, it first sends an ACK.",
+      "BA permits multiple packets to be acknowledged by a single packet instead of sending an ACK for each received packet.",
+      "The sender can request to get an ACK for a netlink message."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What subsystem of the Linux kernel is maintained in git repositories and provides an interface to userspace through the POSIX socket API?",
+    "golden_answers": [
+      "LINUX KERNEL NETWORKING SUBSYSTEM"
+    ],
+    "context": [
+      "The Linux Kernel Networking subsystem is maintained in two git repositories.",
+      "The Linux kernel networking subsystem provides an interface to the userspace by the standard POSIX socket API.",
+      "the roles of the Linux kernel networking subsystem and the three layers in which it operates."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What is the title of the section that discusses the implementation of the IPv4 network layer and also features in the movie rating dataset used for building a recommendation engine?",
+    "golden_answers": [
+      "CHAPTER 4"
+    ],
+    "context": [
+      "The next chapter, Chapter 4, talks about the implementation of the IPv4 network layer.",
+      "For this example, we will return to the movie rating dataset we used in Chapter 4, Building a Recommendation Engine with Spark.",
+      "Chapter 4 delves into the IPv4 protocol—the Internet and modern life cannot be described without it."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "In which chapter will you learn about the IPv6 protocol as a solution to IPv4 address shortage, and the registration of the IPv6 protocol handler?",
+    "golden_answers": [
+      "CHAPTER 8"
+    ],
+    "context": [
+      "Chapter 8 discusses the IPv6 protocol, which seems to be the inevitable solution to the shortage of IPv4 addresses.",
+      "You will learn about this in Chapter 8, which deals with the IPv6 subsystem.",
+      "You will learn about the registration of the IPv4 protocol handler with the dev_add_pack() method in Chapter 4, and about the registration of the IPv6 protocol handler also with the dev_add_pack() method in Chapter 8."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What is the netlink family that defines operations through internal flags, is resolved by a generic netlink controller, and is used in the iw package with the libnl library?",
+    "golden_answers": [
+      "NL80211"
+    ],
+    "context": [
+      "For example, in nl80211, there are many operations that define internal flags (such as NL80211_FLAG_NEED_NETDEV_UP, NL80211_FLAG_NEED_RTNL, and more).",
+      "genl_ctrl_resolve(state->nl_sock, “nl80211”); This method resolves the generic netlink family name (“nl80211”) to the corresponding numeric family identifier.",
+      "The iw package is based on nl80211 and the libnl library."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "In networking protocols, what state indicates a failed neighbor detection that could lead to the removal of entries from the hash table during scanning?",
+    "golden_answers": [
+      "NUD_FAILED"
+    ],
+    "context": [
+      "Network Unreachability Detection States.",
+      "if (neigh->nud_state & NUD_FAILED) goto out;",
+      "Then it scans the neighbouring hash table and removes entries which their state is not NUD_PERMANENT or NUD_IN_TIMER, and which their reference count is 1, and if one of these conditions is met: either they are in the NUD_FAILED state or the current time is after their used timestamp + gc_staletime."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What statistical technique is widely used in modern and online businesses, features in decision forests, and requires histograms of cluster centers for classification?",
+    "golden_answers": [
+      "CLASSIFICATION"
+    ],
+    "context": [
+      "In fact, it is probably safe to say that classification is one of the most widely used machine learning and statistical techniques in modern businesses and especially online businesses.",
+      "To classify with a decision forest 273",
+      "Now use each dictionary to produce a histogram of cluster centers, and classify with those."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What term describes a proposed explanation that depends on data, has a known distribution under sampling variation, and can be rejected based on statistical analysis such as p-values from an ANOVA?",
+    "golden_answers": [
+      "HYPOTHESIS"
+    ],
+    "context": [
+      "This statistic needs to: (a) depend on your data; (b) depend on your hypothesis; and (c) have a known distribution under sampling variation.",
+      "We have a hypothesis regarding the probability of events.",
+      "We know how to reject the hypothesis that the treatment has no effect by computing a p-value from an ANOVA."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What is the name of the software utility associated with Ethernet packet filtering, often mentioned alongside iptables and arptables?",
+    "golden_answers": [
+      "EBTABLES"
+    ],
+    "context": [
+      "ebtables",
+      "Website:  http://criu.org/Installation.",
+      "There are different iptables implementations in the kernel, according to the protocol: iptables for IPv4, ip6tables for IPv6, arptables for ARP, ebtables for Ethernet."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What is the number that represents a card in a royal flush and is part of the events that include drawing a 10 or a 6 from a deck of cards?",
+    "golden_answers": [
+      "10"
+    ],
+    "context": [
+      "is red, and ![$$\\\\mathcal{C}$$](A442674_1_En_3_Chapter_IEq291.gif) for the event that the card drawn is either a 10 or a 6.",
+      "The event is 'the card is a red suit' and the event is 'the card is a 10'.",
+      "3.38 A royal flush is a hand of five cards, consisting of Ace, King, Queen, Jack and 10 of a single suit."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What is the command-line packet analyzer that is referenced in discussions about tshark filters?",
+    "golden_answers": [
+      "TSHARK"
+    ],
+    "context": [
+      "Mentioned in this appendix in the explanation about tshark filters.",
+      "tshark",
+      "The tshark utility provides a command-line packet analyzer."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What command-line utility is mentioned in relation to filters in an appendix and is also described as a packet analyzer?",
+    "golden_answers": [
+      "TSHARK"
+    ],
+    "context": [
+      "Mentioned in this appendix in the explanation about tshark filters.",
+      "tshark",
+      "The tshark utility provides a command-line packet analyzer."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What is the term for the component that organizes NETLINK_ROUTE messages into families and is associated with the queuing disciplines in networking?",
+    "golden_answers": [
+      "QDISC"
+    ],
+    "context": [
+      "The NETLINK_ROUTE messages can be divided into families.",
+      "ED",
+      "Qdisc—Queuing Disciplines."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What structure is utilized to represent decisions and outcomes, can be built with random choices, and is used for vector quantization of data items?",
+    "golden_answers": [
+      "TREE"
+    ],
+    "context": [
+      "This class of rule can be drawn as a tree, where each node represents a test, and the edges represent the possible outcomes of the test.",
+      "Rather than build the best possible tree, we have built a tree efficiently, but with a number of random choices.",
+      "It is easy to use this tree to vector quantize a query data item."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What is the entity that is utilized as an argument in both the ib_create_ah() method and the ib_alloc_mw() method, and also needs to be deallocated?",
+    "golden_answers": [
+      "PD"
+    ],
+    "context": [
+      "The ib_create_ah() method creates an AH. It takes as an argument a PD and attributes for the AH.",
+      "Deallocate a PD.",
+      "The ib_alloc_mw() method allocates a Memory Window. It takes a PD and the MW type as arguments."
+    ],
+    "nhops": 3
+  },
+  {
+    "question": "What operating system is mentioned in a chapter alongside topics like PPPoE, advanced networking, and various wireless technologies?",
+    "golden_answers": [
+      "ANDROID"
+    ],
+    "context": [
+      "When starting a PPP connection, the userspace pppd daemon creates a PPPoE socket by calling socket(AF_PPPOX, SOCK_STREAM, PX_PROTO_OE).",
+      "Clients on the same LAN can create a PPPoE connection to this server by a pppd daemon, using the rp-pppoe plugin.",
+      "I will conclude the chapter with three short sections, one about the teaming network driver (which is the new kernel link aggregation solution), one about the Point-to-Point over Ethernet (PPPoE) Protocol, and finally one about Android.",
+      "In IPv4, we can manage adding and deleting routing entries.",
+      "For example, IPv6, IPsec, Wireless (IEEE 802.11), IEEE 802.15.4, NFC, InfiniBand, and more.",
+      "Apart from this, in Chapter 14 there are sections about other advanced topics like NFC, cgroups, Android, and more."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "In a routing configuration, what term refers to the entities that define path choices when multipath routing is applied or during the insertion of a fib_info object?",
+    "golden_answers": [
+      "NEXTHOPS"
+    ],
+    "context": [
+      "When Multipath Routing (CONFIG_IP_ROUTE_MULTIPATH) is not set, it cannot be more than 1.",
+      "#ifdef CONFIG_IP_ROUTE_MULTIPATH if (res.fi->fib_nhs > 1 && fl4->flowi4_oif == 0) fib_select_multipath(&res); else #endif . . .",
+      "fib_nhs: The number of nexthops.",
+      "int fib_table_insert(struct fib_table *tb, struct fib_config *cfg);",
+      "This method creates a fib_info object derived from the specified fib_config object.",
+      "This macro iterates over the nexthops of the specified fib_info object (net/ipv4/fib_semantics.c)."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What mechanism determines which MLDv2 Router becomes the Querier when multiple routers are present on the same link, and how is it related to the Multicast Listener Reports and Queries as defined in RFC 3810?",
+    "golden_answers": [
+      "QUERIER ELECTION MECHANISM"
+    ],
+    "context": [
+      "Messages of unknown type, and the following messages, are all handled by the icmpv6_notify() method: ICMPV6_MGM_REDUCTION, ICMPV6_MLD2_REPORT, ICMPV6_NI_QUERY, ICMPV6_NI_REPLY, ICMPV6_DHAAD_REQUEST.",
+      "According to RFC 3810, MLDv2 should be interoperable with nodes that implement MLDv1; an implementation of MLDv2 must support the following two MLDv1 message types:",
+      "This is done by a Querier Election mechanism, as described in section 7.6.2 of RFC 3810.",
+      "The host sends back a Multicast Listener Report by calling the igmp6_send() method.",
+      "The MLDv2 protocol is based on Multicast Listener Reports and Multicast Listener Queries.",
+      "If there are several MLDv2 Routers on the same link, only one of them is selected to be the Querier, and all the other routers are set to be in a Non-Querier state."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What unit of measurement is used for distances between South African provincial capitals and also mentioned in a formula that discusses measuring lengths in meters?",
+    "golden_answers": [
+      "KILOMETERS"
+    ],
+    "context": [
+      "I then used principal coordinate analysis to find positions for each capital, and rotated, translated and scaled the resulting plot to check it against a real map.",
+      "Multidimensional scaling gets positions (the ![$$\\\\mathcal{V}$$ of Sect. 10.4.1) from distances (the ![$$\\\\mathcal{D}^{\\(2\\)}\\(\\\\mathbf{x}\\)$$ of Sect. 10.4.1).",
+      "I obtained distances between the South African provincial capitals, in kilometers.",
+      "Show that the log-likelihood of a dataset is given by the formula: ˙ y_{i} x_{i}^{T} θ - log (1 + exp (x_{ i}^{T} θ)).",
+      "Now assume that you rescale each length by measuring in meters. Your data set now consists of y_{i} = 100x_{i}.",
+      "So, for example, if you measure y in meters you will get a different mean squared error than if you measure y in kilometers for the same dataset."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What protocol is explicitly involved in both sending unicast responses to hosts with specific IPv4 addresses and managing neighbor discovery in TCP/IP communications?",
+    "golden_answers": [
+      "ARP"
+    ],
+    "context": [
+      "struct ipq {",
+      "struct neigh_table { struct neigh_table *next; int family; ... }",
+      "entry_size was explicitly initialized to be sizeof(struct neighbour) + 4 for ARP, and sizeof(struct neighbour) + sizeof(struct in6_addr) for NDISC.",
+      "If there is a host with such an IPv4 address, this host sends a unicast ARP response as a reply.",
+      "The multicast group address that a host wants to join is part of the ICMPv6 header.",
+      "Some of these protocols are discussed in later chapters, including IPv4, IPv6, ICMP4 and ICMP6, ARP, and Neighbour Discovery."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What is the term used to label sequences of packets in networking that relates to a structure that supports various operations for managing resource allocation?",
+    "golden_answers": [
+      "FLOW"
+    ],
+    "context": [
+      "if (!xfrm6_route_forward(skb)) { IP6_INC_STATS(net, ip6_dst_idev(dst), IPSTATS_MIB_INDISCARDS); goto drop; }",
+      "Note that if the packet is to be forwarded, the xfrm_lookup() method was invoked from the __xfrm_route_forward() method, and there is no socket associated with the packet, because it was not generated on the local host; in this case, the specified sk argument is NULL:",
+      "It provides a way to label sequences of packets of a particular flow; this labeling can be used by upper layers for various purposes.",
+      "The cgroup_subsys structure supports various operations for setting limits, checking current usage, and managing resource allocation.",
+      "This method unregisters the specified operations and unassigns them from the specified family.",
+      "The xfrm_selector_match() method, which gets an XFRM selector, a flow, and a family (AF_INET for IPv4 or AF_INET6 for IPv6) as parameters, returns true when the specified flow matches the specified XFRM selector."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What value is decremented for each packet processed in the ip_forward method, which helps avoid issues like endless forwarding due to errors when broadcasting ARP requests?",
+    "golden_answers": [
+      "TTL"
+    ],
+    "context": [
+      "When calling arp_send() with target_hw as NULL, a broadcast ARP request is sent:",
+      "There are cases where the destination address can be found without any help from the neighbouring subsystem—for example, when a broadcast is sent.",
+      "The IPv4 header consists of information that defines how a packet should be handled by the kernel network stack: the protocol being used, the source and destination address, the checksum, the identification (id) of the packet that is needed for fragmentation, the TTL that helps avoiding packets being forwarded endlessly because of some error, and more.",
+      "ED",
+      "NF_INET_FORWARD: This hook is in the ip_forward() method in IPv4, and in the ip6_forward() method in IPv6.",
+      "In ip_forward(), each packet decrements its TTL."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What is the highest layer in the networking model where userspace software processes operate, and how does it relate to the protocols used by wireless device drivers?",
+    "golden_answers": [
+      "APPLICATION LAYER"
+    ],
+    "context": [
+      "There are important kernel networking subsystems not described in any other book.",
+      "The IEEE 802.15.4 standard (IEEE Std 802.15.4-2011) specifies the Medium Access Control (MAC) layer and Physical (PHY) layer for Low-Rate Wireless Personal Area Networks (LR-WPANs).",
+      "The lowest layer is the physical layer, which is the hardware, and the highest layer is the application layer, where userspace software processes are running.",
+      "The generic netlink protocol is used by some userspace packages, such as the hostapd package and the iw package.",
+      "There is a lot of information in this wiki page regarding many wireless device drivers, hardware, and various tools (such as CRDA, the central regulatory domain agent, hostapd, iw, and more).",
+      "There are seven logical networking layers according to the Open Systems Interconnection (OSI) model."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "In the context of IPv6 networking, which daemon is involved in the autoconfiguration process for replacing the old prefix with a new prefix?",
+    "golden_answers": [
+      "RADVD"
+    ],
+    "context": [
+      "See the ipip_tunnel_setup() method in net/ipv4/ipip.c or the ppp_setup() method in drivers/net/ppp_generic.c.",
+      "in PPP you have the ppp_setup() method in drivers/net/ppp/ppp_generic.c.",
+      "See http://troglobit.com/pimd.html . git repository: https://github.com/troglobit/pimd.",
+      "The following sections describe the RDMA API for the following data structures: RDMA device, Protection Domain (PD), eXtended Reliable Connected (XRC), Shared Receive Queue (SRQ), Address Handle (AH), Multicast Groups, Completion Queue (CQ), Queue Pair (QP), Memory Window (MW), Memory Region (MR).",
+      "I discussed various IPv6 topics, like IPv6 addresses (including Special Addresses and Multicast Addresses), how the IPv6 header is built, what the IPv6 extension headers are, the autoconfiguration process, the Rx path in IPv6, and the MLD protocol.",
+      "You have learned in this section about the Autoconfiguration process, and you saw how easy it is to replace an old prefix with a new prefix by configuring and restarting radvd."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "In the context of the Linux networking stack, what is the term used to refer to the identifier for a network protocol you might encounter in the context of packet handling by methods like nf_conntrack_in() and involved in destination tuplehash within the forwarding database?",
+    "golden_answers": [
+      "PROTONUM"
+    ],
+    "context": [
+      "UDP_INC_STATS_BH(net, UDP_MIB_NOPORTS, proto == IPPROTO_UDPLITE);",
+      "Now that you know about the nf_conn struct and some of its members, let’s take a look at the nf_conntrack_in() method.",
+      "ret = l3proto->get_l4proto(skb, skb_network_offset(skb), &dataoff, &protonum);",
+      "The Linux IP stack layer, responsible for forwarding packets and maintaining the forwarding database, is called the routing subsystem.",
+      "ip6_rcv_finish() method first performs a lookup in the routing subsystem by calling the ip6_route_input() method, in case there is no dst attached to the SKB.",
+      "The nf_conntrack_tuple structure includes the protocol and direction for tuplehash in the destination (dst) part."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What protocol is discussed in Chapter 3 that sends error and control messages for the network layer and is also covered in relation to its usage in IPv4 and IPv6?",
+    "golden_answers": [
+      "ICMP PROTOCOL"
+    ],
+    "context": [
+      "In Chapter 1 you will find a general overview of the Linux kernel and the Linux network stack.",
+      "Contents",
+      "In Chapter 3 you will learn about the ICMP protocol, which helps to keep the system behaving correctly by sending error and control messages about the network layer (L3).",
+      "This method handles a PREQ message.",
+      "method is the protocol handler of IPv6. It is the first hook point that all incoming packets reach, before performing a lookup in the routing subsystem.",
+      "The next chapter covers the ICMP protocol, including its usage and its implementation in IPv4 and IPv6."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What unique identifier consists of destination address, spi, and security protocol in the context of networking protocols dealing with unreachable messages and task assignments?",
+    "golden_answers": [
+      "ID"
+    ],
+    "context": [
+      "Every IPv4 packet starts with an IP header, which is at least 20 bytes long.",
+      "When the protocol of the IP header (which is an 8-bit field) is a nonexistent protocol, an ICMP_DEST_UNREACH/ICMP_PROT_UNREACH is sent back to the sender because there is no protocol handler for such a protocol.",
+      "struct ipq {",
+      "Finding the MAC address of a host based on its IP address is the task of the neighbouring subsystem, discussed in Chapter 7.",
+      "The destination address is the address of the host that sent the PADI.",
+      "id: The id (xfrm_id object) consists of three fields, which uniquely define it: destination address, spi, and security protocol (AH, ESP, or IPCOMP)."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What is defined by the time window during which Spark Streaming triggers a computation on the stream in relation to model performance evaluation?",
+    "golden_answers": [
+      "BATCH INTERVAL"
+    ],
+    "context": [
+      "So, does applying these transformations have any impact on model performance? Let's evaluate the various metrics we used previously on log-transformed data as an example.",
+      "See <http://en.wikipedia.org/wiki/Online_machine_learning> for more details on online machine learning.",
+      "A DStream is defined by its input source and a time window called the batch interval.",
+      "2. Designing a Machine Learning System",
+      "Chapter 10, _Real-time Machine Learning with Spark Streaming_, provides an overview of Spark Streaming and how it fits in with the online and incremental learning approaches to apply machine learning on data streams.",
+      "After about 10 seconds, which is the time of our streaming batch interval, Spark Streaming will trigger a computation on the stream due to our use of the `print` operator."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "In a network setup, what do we call the segment of an address space that encompasses multiple machines connected via a gateway, which also relates to determining the next hop in routing entries?",
+    "golden_answers": [
+      "SUBNET"
+    ],
+    "context": [
+      "struct net *net = sock_net(sk); fl4 = &fl4_stack; flowi4_init_output(fl4, ipc.oif, sk->sk_mark, tos, RT_SCOPE_UNIVERSE, sk->sk_protocol, inet_sk_flowi_flags(sk)|FLOWI_FLAG_CAN_SLEEP, faddr, saddr, dport, inet->inet_sport); security_sk_classify_flow(sk, flowi4_to_flowi(fl4));",
+      "For example, for the RTN_UNICAST route type (gateway or direct route), which is a very common route, the error value is 0, which means that there is no error, and the scope is RT_SCOPE_UNIVERSE.",
+      "There are three machines in this setup, all on the same subnet (192.168.2.0/24) and all connected via a gateway (192.168.2.1).",
+      "entry_size: When allocating a neighbour entry by the neigh_alloc() method, the size for allocation is tbl->entry_size + dev->neigh_priv_len.",
+      "If (atomic_read(&tbl->entries) > (1 << nht->hash_shift)) nht = neigh_hash_grow(tbl, nht->hash_shift + 1);",
+      "A routing table can be described, in a somewhat simplified way, as a table of entries where each entry determines which nexthop should be chosen for traffic destined to a subnet."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What type of namespaces in the Linux kernel handles UTS procfs entries and supports features added in kernel version 2.6.26?",
+    "golden_answers": [
+      "UTS NAMESPACES"
+    ],
+    "context": [
+      "Extract the sip and tip addresses:",
+      "Remember to replace this domain name with your own master domain name.",
+      "I should note that UTS namespaces implementation also handles UTS procfs entries. There are only two UTS procfs entries, /proc/sys/kernel/domainname and /proc/sys/kernel/hostname, which are writable.",
+      "Support for IPv6 Multicast Routing was added in kernel 2.6.26 (2008), based on a patch by Mickael Hoerdt.",
+      "Mount namespaces were the first type of Linux namespaces to be merged in 2002, for kernel 2.4.19.",
+      "These are the six namespaces available in the Linux kernel as of this writing: Mount namespaces, PID namespaces, IPC namespaces, UTS namespaces, user namespaces, and network namespaces."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What identifier is checked in the L2CAP header during the packet handling process in network communication protocols?",
+    "golden_answers": [
+      "CID"
+    ],
+    "context": [
+      "unsigned long hits; /* number of hits */",
+      "if (skb_copy_bits(skb, ptr, skb_transport_header(skb2), len))",
+      "struct l2cap_hdr includes two fields: len and cid.",
+      "The packet handling process includes freeing the skb if everything went fine and incrementing the INDELIVERS SNMP MIB counter.",
+      "The l2cap_recv_acldata() method calls the l2cap_recv_frame() method, which fetches the L2CAP header (the l2cap_hdr object was described earlier) from the SKB.",
+      "The l2cap_recv_frame() method checks the channel id of the received packet by inspecting the cid of the l2cap_hdr object."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What inequality can be used to give a lower bound on the probability of a random variable equaling zero, while also relating variance and expectations in predictions?",
+    "golden_answers": [
+      "MARKOV'S INEQUALITY"
+    ],
+    "context": [
+      "Solution: var(X) = E[(X - E[X])^{2}] = E[X^{2}] - E[X]^{2} = (1p - 0(1 - p)) - p^{2} = p(1 - p).",
+      "You know that ![ \\\\mathbb{E}\\\\left \\\\[X\\\\right \\\\] = 2 ](A442674_1_En_4_Chapter_IEq89.gif) and ![ \\\\mathsf{var}\\\\left \\\\(\\\\left \\\\{X\\\\right \\\\}\\\\right \\\\) = 0.01 ](A442674_1_En_4_Chapter_IEq90.gif). Use Chebyshev's inequality to give a lower bound on P({X = 2}).",
+      "You know that ![ \\\\mathbb{E}\\\\left \\\\[\\\\mid \\\\!\\\\mid \\\\!\\\\!X\\\\!\\\\!\\\\mid \\\\!\\\\! \\\\right \\\\] = 0.2 ](A442674_1_En_4_Chapter_IEq88.gif). Use Markov's inequality to give a lower bound on P({X = 0}).",
+      "At the minimum, we must have $$\\\\displaystyle{\\\\frac{d\\\\mathsf{var}\\\\left \\\\{u_{i}\\\\right \\\\}} {da} = 0 = -2r + 2a}$$ so that a = r and the correct prediction is $$\\\\displaystyle{\\\\hat{y}_{0}^{p} = r\\\\hat{x}_{0}}$$.",
+      "If x 0 is k standard deviations from the mean of x, then the predicted value of y will be rk standard deviations away from the mean of y, and the sign of r tells whether y increases or decreases.",
+      "Markov's inequality: for X a random variable, a > 0."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What statistical concept represents a natural model for a random variable with only a known lower and upper bound, and is related to the estimation process in statistical simulations?",
+    "golden_answers": [
+      "UNIFORM DISTRIBUTION"
+    ],
+    "context": [
+      "Now if we have a set of IID samples of X, which we write x i , then we can form a set of IID samples of F by forming f(x i ) = f i .",
+      "The F-statistic has a known distribution (called the F-distribution), assuming that {x} and {y} are IID samples from normal distributions.",
+      "5.5.1 Remember These Definitions",
+      "In each case, you will get an answer that is a very poor estimate of the right answer, and the standard deviation of this estimate might look very small.",
+      "The estimate of a probability or of an expectation that comes out of a simulation experiment is a random variable, because it is a function of random numbers.",
+      "If we know nothing about a random variable apart from the fact that it has a lower and an upper bound, then a uniform distribution is a natural model."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What statistical distribution can be described by tossing a k-sided die N times and also relates to the modeling of prior distributions with Beta distributions in statistical analysis?",
+    "golden_answers": [
+      "MULTINOMIAL DISTRIBUTION"
+    ],
+    "context": [
+      "Write u for one data point and v for another; we can compute.",
+      "for ( (k, v) <- clusterAssignments.toSeq.sortBy(_._1)) { ... }",
+      "The form of the multinomial distribution is described in a straightforward way, which involves tossing a k-sided die N times.",
+      "Plot 1/α² as a function of N. What do you notice?",
+      "We model the prior on θ with a Beta distribution, with parameters α > 0, β > 0.",
+      "5.5.1 Remember These Definitions"
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "In the context of machine learning, what do we need to evaluate predictions against when calculating performance metrics for classification models?",
+    "golden_answers": [
+      "TRUE LABELS"
+    ],
+    "context": [
+      "user-item combination: val ratingsAndPredictions = ratings.map{ case Rating(user, product, rating) => ((user, product), rating) }.join(predictions)",
+      "The text provides a practical example of calculating Mean Squared Error using user ratings.",
+      "the class labels) using the model and evaluate the predictions against the true labels using metrics similar to some that we saw for classification evaluation (that is, based on true positive and negative and false positive and negative rates).",
+      "\"Perhaps the first question we should answer is, 'Why use machine learning at all?'",
+      "many machine learning systems rely on receiving labeled data in order to train models.",
+      "Since clustering can be thought of as unsupervised classification, if we have some form of labeled (or partially labeled) data available..."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "In the context of probability and statistics, what type of numbers are the eigenvalues of symmetric matrices and also serve as outcomes in relation to random variables and their values?",
+    "golden_answers": [
+      "REAL NUMBERS"
+    ],
+    "context": [
+      "Generally, when we want to refer to the j, k'th entry of a matrix \\\\mathcal{A}, we will write \\\\mathcal{A}_{jk}, so \\\\Sigma _{jk} is the covariance between the j'th and k'th components of the data.",
+      "D) depends on D, so they're not independent. Another way is to notice that the rank of the table, as a matrix, is 6, which means that it can't be the outer product of two vectors.",
+      "In the case of a symmetric matrix, the eigenvalues are real numbers, and there are d distinct eigenvectors that are normal to one another, and can be scaled to have unit length.",
+      "Using our previous reasoning, we have that...is the value of a random variable with a t-distribution with k x + k y − 2 degrees of freedom.",
+      "The probability that a random variable X takes the value x is given by P({ω: X(ω) = x}).",
+      "Given a sample space, a set of events, a probability function, and a countable set of real numbers, a discrete random variable is a function with domain and range."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "Which chapter discusses the communication between userspace and the kernel using netlink sockets, following the overview of namespaces in the Linux kernel?",
+    "golden_answers": [
+      "CHAPTER 2"
+    ],
+    "context": [
+      "These are the six namespaces available in the Linux kernel as of this writing: Mount namespaces, PID namespaces, IPC namespaces, UTS namespaces, user namespaces, and network namespaces.",
+      "In Chapter 1 you will find a general overview of the Linux kernel and the Linux network stack.",
+      "Contents",
+      "Messages of unknown type, and the following messages, are all handled by the icmpv6_notify() method: ICMPV6_MGM_REDUCTION, ICMPV6_MLD2_REPORT, ICMPV6_NI_QUERY, ICMPV6_NI_REPLY, ICMPV6_DHAAD_REQUEST.",
+      "In such a case, the kernel builds and sends an MLDv2 Multicast Listener Report packet (ICMPV6_MLD2_REPORT), where the destination address is ff02::16.",
+      "The communication between userspace and the kernel is done with netlink sockets, described in Chapter 2."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What metric is calculated to determine the effectiveness of a split in a decision tree when analyzing the relationship between elements in a dataset?",
+    "golden_answers": [
+      "INFORMATION GAIN"
+    ],
+    "context": [
+      "Instead, we adopt the convention that the elements of ![$$\\mathcal{U}$$] are always ordered so that the elements of ![$$\\Lambda$$] are sorted along the diagonal, with the largest value coming first.",
+      "Chapter described methods to explore the relationship between two elements in a dataset.",
+      "The decision tree algorithm is a top-down approach that begins at a root node (or feature), and then selects a feature at each step that gives the best split of the dataset, as measured by the information gain of this split.",
+      "The method doesn't need to see all the training data to produce a classifier that is about as good as it would be if the method had seen all training data.",
+      "For this procedure to work, we need: (a) the groups to be the 'same' before treatment, and (b) a sensible way to tell whether the groups are different.",
+      "Repeating this procedure F times, computing the information gain for each split, then keep the split that has the best information gain."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "In the OSI model, what is the highest logical networking layer where userspace software processes operate, in contrast to the physical and MAC layers specified by the IEEE 802.15.4 standard?",
+    "golden_answers": [
+      "APPLICATION LAYER"
+    ],
+    "context": [
+      "Linux Kernel Networking stack and network device drivers, except for cases when dealing with a subsystem that has a specific mailing list and a specific git repository (such as the wireless subsystem, discussed in Chapter 12).",
+      "The Linux Network Stack consists of seven logical networking layers according to the OSI model.",
+      "There are seven logical networking layers according to the Open Systems Interconnection (OSI) model.",
+      "Busy Poll Sockets, the Bluetooth subsystem, the IEEE 802.15.4 subsystem, the Near Field Communication (NFC) subsystem, the PCI subsystem, and more.",
+      "The IEEE 802.15.4 standard (IEEE Std 802.15.4-2011) specifies the Medium Access Control (MAC) layer and Physical (PHY) layer for Low-Rate Wireless Personal Area Networks (LR-WPANs).",
+      "The lowest layer is the physical layer, which is the hardware, and the highest layer is the application layer, where userspace software processes are running."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What transport layer protocol, discussed in Chapter 11 and associated with the lksctp-tools project, operates over both IPv4 and IPv6 and is utilized alongside UDP and TCP?",
+    "golden_answers": [
+      "SCTP"
+    ],
+    "context": [
+      "In the arp_constructor() method, for example, you call the arp_mc_map() method to set the hardware address of the neighbour (ha) according to the neighbour IPv4 primary_key address, and you set the nud_state to be NUD_NOARP, because multicast addresses don’t need ARP.",
+      "GSO can handle also IPv6, UDP, and other protocols.",
+      "Chapter 11 describes four Layer 4 protocols, starting with the most commonly used protocols, UDP and TCP, and concluding with two newer protocols, SCTP and DCCP.",
+      "Here are the conditions under which rate limiting check will not be performed: The message type is unknown, The packet is of PMTU discovery, The device is a loopback device, The ICMP type is not enabled in the rate mask.",
+      "After the boot, all physical network devices and all sockets belong to that initial namespace, as well as the network loopback device.",
+      "Regarding using sockets for SCTP, I should mention the lksctp-tools project ( http://lksctp.sourceforge.net/ )."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What type of mathematical structures are evaluated in the context of eigenvalues and principal components, which also includes conditions such as being symmetric and positive semidefinite?",
+    "golden_answers": [
+      "MATRICES"
+    ],
+    "context": [
+      "Notice that it is quite usual to write a covariance matrix as \\\\Sigma, and we will follow this convention.",
+      "Plot the eigenvalues of the covariance matrix in sorted order. How many principal components should be used to represent this dataset? Why?",
+      "Matrices don't have to be symmetric to have eigenvectors and eigenvalues, but the symmetric case is the only one of interest to us.",
+      "Now this is a sum of squares. If there is some a such that \\\\mathbf{a}^{T}\\\\(\\\\mathbf{x}_{i} -\\\\mathsf{mean}\\\\left (\\\\left \\\\{\\\\mathbf{x}\\\\right \\\\}\\\\right ) = 0 for every i, then the covariance matrix must be positive semidefinite.",
+      "Notice ![$\\\\mathcal{M}(\\\\mathbf{x})$$](A442674_1_En_10_Chapter_IEq77.gif) is symmetric and it is positive semidefinite.",
+      "15.1 Useful Material About Matrices 355"
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What type of routing daemons can be associated with both the AMD server configured as a multicast router and the implementation of various routing protocols such as BGP and OSPF?",
+    "golden_answers": [
+      "USERSPACE ROUTING DAEMONS"
+    ],
+    "context": [
+      "The AMD server (192.168.2.200) added the Windows server (192.168.2.10) as a gateway for accessing 192.168.2.7 (the laptop) by ip route add 192.168.2.7 via 192.168.2.10.",
+      "The AMD server, in the middle, is configured as a multicast router, and a userspace multicast routing daemon (like pimd or mrouted) runs on it.",
+      "The routing entry could also be added by userspace routing daemons, like ZEBRA, XORP, MROUTED, and more.",
+      "for the Multicast Listener Discovery (MLD) protocol, which is the counterpart of the IGMP protocol in IPv4, shown in Figure 3-2.",
+      "An Open Source project, implementing various routing protocols, like BGP, IGMP, OLSR, OSPF, PIM, and RIP.",
+      "By userspace routing daemons which implement routing protocols like BGP, EGP, OSPF, or others."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What protocol is used for communication between userspace and the kernel when managing wireless device drivers and requires the registration of objects such as genl_ops and genl_family?",
+    "golden_answers": [
+      "GENERIC NETLINK SOCKETS"
+    ],
+    "context": [
+      "There is a lot of information in this wiki page regarding many wireless device drivers, hardware, and various tools (such as CRDA, the central regulatory domain agent, hostapd, iw, and more).",
+      "The generic netlink protocol is used by some userspace packages, such as the hostapd package and the iw package.",
+      "Let's take a brief look at what happens in a short typical userspace-kernel session when sending a command to the kernel via generic netlink sockets using the libnl library and the libnl-genl library.",
+      "Create a genl_ops object and register it by calling genl_register_ops().",
+      "It is equivalent to calling genl_register_family() followed by genl_register_ops() for every operation entry in the table, taking care to unregister the family on the error path.",
+      "To work with generic netlink sockets in the kernel, you should do the following: Create a genl_family object and register it by calling genl_register_family()."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What is the most commonly used IPsec protocol that supports both encryption and authentication, and what is its main IPv4 handler?",
+    "golden_answers": [
+      "ESP PROTOCOL"
+    ],
+    "context": [
+      "This method performs a TRIE lookup with the specified key.",
+      "Both sides (called initiator and responder in IPsec terminology) should agree on parameters such as a key (or more than one key), authentication, encryption, data integrity and key exchange algorithms, and other parameters such as key lifetime (IKEv1 only).",
+      "The ESP protocol is the most commonly used IPsec protocol; it supports both encryption and authentication.",
+      "void ip_options_fragment(struct sk_buff *skb) { unsigned char *optptr = skb_network_header(skb) + sizeof(struct iphdr); struct ip_options *opt = &(IPCB(skb)->opt); int l = opt->optlen; int optlen;",
+      "This method is the main IPv4 ESP protocol handler.",
+      "The next section discusses the IPv4 ESP implementation."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What is the term used to describe a metaphorical container from which tickets are drawn in probability and statistics, and is also relevant in the context of airlines selling more tickets than available seats?",
+    "golden_answers": [
+      "URN"
+    ],
+    "context": [
+      "An airline runs a regular flight with six seats on it.",
+      "Airlines generally sell more tickets for a flight than there are seats on the aircraft.",
+      "One natural way to think about sampling with replacement is to imagine the data items as being written on tickets, which are placed in an urn.",
+      "We require that the mean and variance of this distribution exist (there are some distributions for which this criterion does not apply; they're of no interest to us).",
+      "The variance is defined for a dataset {x} of N data items as: $$\\\\mathsf{var}\\\\left \\(\\\\left \\\\{x\\\\right \\\\}\\\\right \\\\) = \\\\frac{1}{N}\\\\left(\\\\sum_{i=1}^{N}(x_{i} - \\\\mathsf{mean}\\\\left(\\\\left\\\\{x\\\\right\\\\}\\\\right\\\\))^{2}\\\\right)$$.",
+      "The order in which the tickets are drawn from the urn doesn't matter, because each time we draw a ticket we draw from the same urn."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What is the routing database that is essential for the Linux Networking stack to forward traffic and involves the fib_table_insert() method?",
+    "golden_answers": [
+      "FORWARDING INFORMATION BASE (FIB)"
+    ],
+    "context": [
+      "Two additional terms that I should mention here, which are commonly used in routing, are default gateway and default route.",
+      "Adding a default route increments tb_num_default by 1, by the fib_table_insert() method.",
+      "Subsequently, insertion into the Forwarding Information Base (FIB), which is the routing database, is accomplished with the fib_table_insert() method;",
+      "One of the important goals of the Linux Networking stack is to forward traffic.",
+      "Becoming familiar with and learning about these two data structures is essential for understanding the Linux Kernel Networking stack.",
+      "This chapter is mainly an introduction and presents the main data structures that are used by the IPv4 routing subsystem."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What event is called in kernel 3.11 when there is a change of the IFF_NOARP flag related to network device changes?",
+    "golden_answers": [
+      "NETDEV_CHANGE EVENT"
+    ],
+    "context": [
+      "entry_size was explicitly initialized to be sizeof(struct neighbour) + 4 for ARP, and sizeof(struct neighbour) + sizeof(struct in6_addr) for NDISC.",
+      "Before kernel 3.3, the entry_size was explicitly initialized to be sizeof(struct neighbour) + 4 for ARP, and sizeof(struct neighbour) + sizeof(struct in6_addr) for NDISC.",
+      "From kernel 3.11, you handle a NETDEV_CHANGE event when there was a change of the IFF_NOARP flag by calling the neigh_changeaddr() method.",
+      "unsigned long hits; /* number of hits */",
+      "In NDISC, the ndisc_netdev_event() method is registered as the callback for netdev events; it handles the NETDEV_CHANGEADDR, NETDEV_DOWN, and NETDEV_NOTIFY_PEERS events.",
+      "Network Device Events:"
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What subsystem in Linux is discussed with respect to managing routing entries and address configuration mechanisms like DAD?",
+    "golden_answers": [
+      "LINUX NEIGHBOURING SUBSYSTEM"
+    ],
+    "context": [
+      "In IPv4, we can manage adding and deleting routing entries.",
+      "IPsec and IPv4/IPv6",
+      "This chapter discusses the Linux neighbouring subsystem and its implementation in Linux.",
+      "Routers must not forward any packets with link-local source or destination addresses.",
+      "DAD is a solution. When a host tries to configure an address, it first creates a Link Local address (a Link Local address starts with FE80).",
+      "This is done with the DAD (Duplicate Address Detection) mechanism, which was described in the previous chapter which deals with the Linux Neighbouring Subsystem."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "In the context of networking in kernel development, which structure may be involved when an IPv4 packet is transmitted outside and the MTU is updated?",
+    "golden_answers": [
+      "STRUCT SK_BUFF"
+    ],
+    "context": [
+      "For example, for an IPv4 packet generated locally by a socket and transmitted outside, the network layer (IPv4) adds an IPv4 header to the SKB.",
+      "Here is a short description of several members of the net structure: ...",
+      "E layer (PPPoE protocol handlers, the sockets used by PPPoE, the network notification handler, the PPPoE procfs entry, and more).",
+      "The ib_mtu_to_int() method returns the number of bytes, as an integer, for MTU enumerations.",
+      "static void __ip_rt_update_pmtu(struct rtable *rt, struct flowi4 *fl4, u32 mtu)",
+      "static void __ip_do_redirect(struct rtable *rt, struct sk_buff *skb, struct flowi4 *fl4, bool kill_route) {...}"
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "How does the concept of a fair random sample apply to the analysis of birth data represented in different figures within a population?",
+    "golden_answers": [
+      "FAIR RANDOM SAMPLE"
+    ],
+    "context": [
+      "N p data items, and each has the same probability of being chosen. This is sometimes referred to as 'sampling with replacement'.",
+      "For Fig. 6.2, I assumed that all 253 weight measurements represented the entire population, then simulated what would happen for different random samples (with replacement) of different sizes.",
+      "You can regard this as a fair random sample (with replacement, though try not to think too hard about what that means) of births.",
+      "The plot of Fig. 2.1 shows the total number of respondents, and if you refer to Fig. 1.1, you will notice that there are slightly more girls in the study.",
+      "Are boys and girls equiprobable? In Carcelle-le-Grignon at the end of the eighteenth century, there were 2009 births.",
+      "You can regard this as a fair random sample of births."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What protocol is discussed in the context of both Neighbor Discovery Optimization for IPv6 and potential security threats such as the Smurf Attack that utilizes specific message headers?",
+    "golden_answers": [
+      "ICMP PROTOCOL"
+    ],
+    "context": [
+      "Neighbor Discovery Optimization addresses issues with IPv6 multicast support and power management in IEEE 802.15.4 devices.",
+      "Added for Neighbour Discovery Optimization for IPv6. See RFC 6775.",
+      "The next chapter covers the ICMP protocol, including its usage and its implementation in IPv4 and IPv6.",
+      "The basic definition of ICMPv4 is in RFC 792, \"Internet Control Message Protocol.",
+      "Every ICMP packet starts with an ICMPv4 header.",
+      "Keep in mind that the ICMP protocol is also used for various security attacks; for example, the Smurf Attack is a denial-of-service attack in which large numbers of ICMP packets with the intended victim's spoofed source IP are sent as broadcasts to a computer network using an IP broadcast address."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What subsystem in the Linux kernel allows for registering callbacks at various points during packet traversal and was also discussed in relation to necessary changes for a project involving a specific device?",
+    "golden_answers": [
+      "NETFILTER"
+    ],
+    "context": [
+      "The netfilter subsystem provides a framework that enables registering callbacks in various points (netfilter hooks) in the packet traversal in the network stack.",
+      "Some netfilter hooks appear in the figure, like NF_INET_PRE_ROUTING and NF_INET_LOCAL_IN.",
+      "Invoke any netfilter NF_INET_PRE_ROUTING hook callback and then call the xfrm4_rcv_encap_finish() method.",
+      "P: /devices/virtual/net/mybr E: DEVPATH=/devices/virtual/net/mybr ...",
+      "There is one central mailing list, the Linux Kernel Mailing List (LKML), and many subsystems have their own mailing lists.",
+      "This project required some changes in the Linux kernel netfilter subsystem."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What system feature is created when executing the unshare() command with the CLONE_NEWNET flag and is also referenced through unique proc inodes in network initialization functions?",
+    "golden_answers": [
+      "NAMESPACE"
+    ],
+    "context": [
+      "Running this command triggers first the creation of a file called /var/run/netns/ns1, and then the creation of the network namespace by the unshare() system call, passing it a CLONE_NEWNET flag.",
+      "In order to support namespaces, two system calls were added to the kernel: unshare() and setns(); and six new flags were added to the CLONE_* flags.",
+      "First, it creates a new namespace (or several namespaces) according to the specified flag.",
+      "static int uevent_net_init(struct net *net) { struct uevent_sock *ue_sk; struct netlink_kernel_cfg cfg = { .groups = 1, .flags = NL_CFG_F_NONROOT_RECV, };",
+      "static int __net_init xfrm_user_net_init(struct net *net) { ... return 0; }",
+      "unique proc inode for the newly created namespace by calling the proc_alloc_inum() method; the newly created unique proc inode number is assigned to net->proc_inum."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What data structure allows for the management of Receive Requests in a single queue while also being associated with multicast group addresses and interfaces in an RDMA environment?",
+    "golden_answers": [
+      "SRQ"
+    ],
+    "context": [
+      "The MFC holds mappings between multicast group addresses and the interfaces that have joined those groups.",
+      "The following sections describe the RDMA API for the following data structures: RDMA device, Protection Domain (PD), eXtended Reliable Connected (XRC), Shared Receive Queue (SRQ), Address Handle (AH), Multicast Groups, Completion Queue (CQ), Queue Pair (QP), Memory Window (MW), Memory Region (MR).",
+      "SRQ",
+      "Create an AH that will be used when posting a Send Request in a UD QP.",
+      "At this state, no Send Requests or Receive Requests can be posted to it.",
+      "SRQ is a system that allows managing Receive Requests in a single queue."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What type of namespaces were first merged into the Linux kernel in 2002, and what are these namespaces known collectively as in the Linux networking stack?",
+    "golden_answers": [
+      "MOUNT NAMESPACES"
+    ],
+    "context": [
+      "Linux Kernel Networking stack and network device drivers, except for cases when dealing with a subsystem that has a specific mailing list and a specific git repository (such as the wireless subsystem, discussed in Chapter 12).",
+      "In Chapter 1 you will find a general overview of the Linux kernel and the Linux network stack.",
+      "These are the six namespaces available in the Linux kernel as of this writing: Mount namespaces, PID namespaces, IPC namespaces, UTS namespaces, user namespaces, and network namespaces.",
+      "are sent immediately. This behavior can be changed with the UDP_CORK socket option (introduced in kernel 2.5.44), which causes packet data passed to the udp_sendmsg() method to be accumulated until the final packet is released by unsetting the option.",
+      "This method was added in kernel 2.6.39 for enabling lockless transmit fast path to the UDPv4 implementation; called when not using the UDP_CORK socket option.",
+      "Mount namespaces were the first type of Linux namespaces to be merged in 2002, for kernel 2.4.19."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What is the significance of the priority in the context of hash tables and network protocols, specifically in notifier blocks and IPv6 headers?",
+    "golden_answers": [
+      "PRIORITY"
+    ],
+    "context": [
+      "The hash table size is 1 << nht->hash_shift; the hash table must be enlarged if it is exceeded.",
+      "The struct neigh_table contains various member variables like next, family, entry_size, key_len, etc.",
+      "struct notifier_block { int (*notifier_call)(struct notifier_block *, unsigned long, void *); struct notifier_block __rcu *next; int priority; };",
+      "So, if you want to allow a user with uid and gid of 1000 to use the ICMP socket, you should run this from the command line (with root privileges): echo 1000 1000 > /proc/sys/net/ipv4/ping_group_range.",
+      "struct ipq {",
+      "The following is a description of the members of the ipv6hdr structure:"
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What is the term used for the technique that involves projecting standardized input data for dimensionality reduction, particularly in the context of analyzing facial images from the LFW dataset?",
+    "golden_answers": [
+      "PCA"
+    ],
+    "context": [
+      "4. Building a Recommendation Engine with Spark",
+      "8. Dimensionality Reduction with Spark",
+      "It is a common practice to standardize input data prior to running dimensionality reduction models, in particular for PCA.",
+      "We require that the mean and variance of this distribution exist (there are some distributions for which this criterion does not apply; they're of no interest to us).",
+      "The mean of this data is $107,903.",
+      "Projecting data using PCA on the LFW dataset."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What type of data can be plotted as a function of another entry while considering important assumptions about variance in different populations?",
+    "golden_answers": [
+      "CONTINUOUS DATA"
+    ],
+    "context": [
+      "It is clear which of the two populations has largest variance if they are different.",
+      "I will assume that the X population might have larger variance.",
+      "This is an important assumption, but it doesn't necessarily mean that data is continuous.",
+      "GSO can handle also IPv6, UDP, and other protocols.",
+      "Similarly to what you saw in IPv6, you also perform a lookup and create an entry if you did not find any match.",
+      "For some continuous data, we can plot the one entry as a function of the other."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What component must receive and process IGMP messages while being related to the operational status of multicast routing daemons such as pimd or mrouted?",
+    "golden_answers": [
+      "USERSPACE MULTICAST ROUTING DAEMON"
+    ],
+    "context": [
+      "The assert parameter can be assigned one of these values: IGMPMSG_NOCACHE, when an unresolved cache entry is added to the queue of unresolved entries and wants to notify the userspace routing daemon that it should resolve it, IGMPMSG_WRONGVIF, and IGMPMSG_WHOLEPKT.",
+      "It also calls the ipmr_cache_report() method, which builds an IGMP message (IGMPMSG_NOCACHE) and delivers it to the userspace multicast routing daemon by calling eventually the sock_queue_rcv_skb() method.",
+      "This IGMP packet is delivered to the userspace multicast routing daemon by calling the sock_queue_rcv_skb() method.",
+      "This is a listing showing numerical attributes related to various items: car | 0 | 3 | 0 | 0 | 0 | 1.",
+      "Starting the pimd daemon, for example, sets it to 1, and stopping the daemon sets it to 0.",
+      "These cases are more complex as they should be handled in conjunction with a userspace multicast routing daemon, like the pimd daemon or the mrouted daemon."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What are the procedures associated with ICMPv4 that are discussed in relation to the network namespace and the initialization method?",
+    "golden_answers": [
+      "ICMPV4 PROCFS ENTRIES"
+    ],
+    "context": [
+      "static int ip_mr_forward(struct net *net, struct mr_table *mrt, struct sk_buff *skb, struct mfc_cache *cache, int local) {",
+      "The network namespace is represented by a structure called net.",
+      "ICMPv4 procfs entries are represented by variables in the netns_ipv4 structure (include/net/netns/ipv4.h), which is an object in the network namespace (struct net).",
+      "We can use tables or software to choose a value a so that P(\\\\left \\\\{T \\\\leq a\\\\right \\\\} =\\\\alpha and a value b such that P(\\\\left \\\\{T \\\\geq b\\\\right \\\\} =\\\\alpha.",
+      "I conclude this chapter with a short list of important methods of ICMPv4 and ICMPv6, 6 tables, a section about procfs entries, and a short section about using a reject target in iptables and ip6tables to create ICMP 'Destination Unreachable' messages.",
+      "The ICMPv4 procfs entries are initialized in the icmp_sk_init() method; I mention them in this chapter and summarize them in the \\\"Quick Reference\\\" section at the end of this chapter."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What transport layer protocol is associated with Layer 4 sockets and is mentioned as a method for sending IPv6 packets?",
+    "golden_answers": [
+      "TCP"
+    ],
+    "context": [
+      "Packets generated by the local host are created by Layer 4 sockets—for example, by TCP sockets or by UDP sockets.",
+      "Layer 4 Protocols define various networking protocols and their functionalities including Sockets and UDP.",
+      "It recognizes TCP, UDP, and ICMP across Ethernet, PPP, SLIP, FDDI, and null interfaces.",
+      "Examples of features derived from raw data include computing average values, median values, variances, sums, differences, maximums or minimums, and counts.",
+      "Here is a short description of several members of the net structure: ...",
+      "Also in IPv6, there are two main methods for sending IPv6 packets from Layer 4, the transport layer: the first is the ip6_xmit() method, which is used by the TCP, Stream Control Transmission Protocol (SCTP), and Datagram Congestion Control Protocol (DCCP) protocols."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What is the document that specifies the interoperability requirements between MLDv2 and MLDv1 implementations in multicast communication protocols?",
+    "golden_answers": [
+      "RFC 3810"
+    ],
+    "context": [
+      "int igmp6_event_query(struct sk_buff *skb); This method handles MLDv2 and MLDv1 queries.",
+      "ICMPV6_MGM_QUERY (Multicast Listener Report) is handled by igmp6_event_query().",
+      "According to RFC 3810, MLDv2 should be interoperable with nodes that implement MLDv1; an implementation of MLDv2 must support the following two MLDv1 message types:",
+      "This chapter covered advanced IPv4 routing topics, like Multicast Routing, the IGMP protocol, Policy Routing, and Multipath Routing.",
+      "Multicast group memberships are handled by ICMPv6 in conjunction with the MLD (Multicast Listener Discovery) protocol, whereas in IPv4 this is performed by IGMP (Internet Group Management Protocol).",
+      "According to section 5.2.14 in RFC 3810, all MLDv2-capable multicast routers should listen to this multicast address."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What term is used in networking to describe the capability of endpoints having multiple IP addresses, which is discussed in the context of unique features of the SCTP protocol?",
+    "golden_answers": [
+      "MULTIHOMING"
+    ],
+    "context": [
+      "Another example: for a management frame, if the length of the SKB is less than the minimum (24), the packet is discarded and RX_DROP_MONITOR is returned.",
+      "default: case 0: /* By default announce any local IP */ if (skb && inet_addr_type(dev_net(dev), ip_hdr(skb)->saddr) == RTN_LOCAL) saddr = ip_hdr(skb)->saddr; break;",
+      "SCTP multihoming refers to having multiple IP addresses on both endpoints.",
+      "Power management and power save mode are two different topics.",
+      "There are some unique features in the wireless stack that do not exist in the ordinary network stack, such as power save mode.",
+      "I discussed some unique features of the SCTP protocol, like multihoming and multistreaming."
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What error code is returned when attempting to move a network device to a different namespace that has a specific feature set, and also when a certain condition in the IPv6 handling code is not met?",
+    "golden_answers": [
+      "EINVAL"
+    ],
+    "context": [
+      "The Linux network stack does not include all the IP options. For a full list, see www.iana.org/assignments/ip-parameters/ip-parameters.xml.",
+      "This mailing list handles the Linux Kernel Networking stack and network device drivers, except for cases when dealing with a subsystem that has a specific mailing list and a specific git repository.",
+      "Trying to move a network device whose NETIF_F_NETNS_LOCAL feature is set to a different namespace will fail with an error of –EINVAL.",
+      "Let’s look first at the local delivery case: the ip6_input() method is a very short method.",
+      "if (likely(deliver)) ip6_input(skb); else { /* discard */ kfree_skb(skb); } return 0; }",
+      "error: IP6_INC_STATS_BH(net, ip6_dst_idev(dst), IPSTATS_MIB_INADDRERRORS); drop: kfree_skb(skb); return -EINVAL;"
+    ],
+    "nhops": 6
+  },
+  {
+    "question": "What network technology utilizes a 48-bit address assigned to each network interface and is involved in packet handling from Layer 2 to Layer 3 during data transmission?",
+    "golden_answers": [
+      "ETHERNET"
+    ],
+    "context": [
+      "This function declaration includes parameters such as a pointer to an ib_device, a union for ib_gid, a pointer for the port number, and a pointer for the index.",
+      "The pppoe_init() method is used to register protocol handlers and initializes the PPPoE protocol.",
+      "In the case of Ethernet, this is a 48-bit address, the MAC address which is assigned for each Ethernet network interface.",
+      "First we make some sanity checks (for example, checking to see if the packet type is not PACKET_HOST or if the packet size is shorter than the TCP header) and discard the packet if there are any problems; then some initializations are made and also a lookup for a corresponding socket is performed by calling the __inet_lookup_skb() method.",
+      "If the pkt_type—which was determined by the eth_type_trans() method, which should be called from the network driver, and which is discussed in Appendix A—is not PACKET_HOST, the packet is discarded:",
+      "When the packet was in L2, in the network device driver Rx path, skb->data pointed to the L2 (Ethernet) header; now that the packet is going to be moved to Layer 3, immediately after the call to the eth_type_trans() method, skb->data should point to the network (L3) header, which starts immediately after the Ethernet header."
+    ],
+    "nhops": 6
+  }
+]
