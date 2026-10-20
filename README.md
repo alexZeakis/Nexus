@@ -78,16 +78,6 @@ Construction runs once per corpus and writes the hypergraph to
 and produce Nexus-Sem, Nexus-Str and Nexus-Hyb. `run_fusion.sh` reads the output
 of the other two, so it runs last.
 
-### Baselines
-
-```
-cd baselines/baselines/
-./run_all.sh
-```
-
-Golden, StandardRAG and PlainLLM: the ceiling, the no-graph reference point and
-the closed-book floor.
-
 ### Compared systems
 
 The three hypergraph systems ([HyperGraphRAG](https://github.com/LHRLAB/HyperGraphRAG),
