@@ -81,7 +81,7 @@ of the other two, so it runs last.
 ### Baselines
 
 ```
-cd sota/baselines/
+cd baselines/baselines/
 ./run_all.sh
 ```
 
